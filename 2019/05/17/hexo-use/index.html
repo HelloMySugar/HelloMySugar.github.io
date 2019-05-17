@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="欢迎来到我的博客">
 <meta property="og:description" content="怎么使用Hexo编写博客前言由于网上太多关于github+hexo搭建教程，搭建这里就不多说了，推荐之前搭建参考的网址： 使用hexo+github搭建免费个人博客详细教程 GitPages+Hexo搭建个人博客 搭建完成后，怎么使用hexo这个框架，网页的排版这些就很难找到相关资料了，自己研究了下，具体整理出来，方便后面的人使用。 目录 博客配置 _config.yml配置详解 Hexo常用命">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-17T07:44:09.193Z">
+<meta property="og:updated_time" content="2019-05-17T07:49:01.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欢迎来到我的博客">
 <meta name="twitter:description" content="怎么使用Hexo编写博客前言由于网上太多关于github+hexo搭建教程，搭建这里就不多说了，推荐之前搭建参考的网址： 使用hexo+github搭建免费个人博客详细教程 GitPages+Hexo搭建个人博客 搭建完成后，怎么使用hexo这个框架，网页的排版这些就很难找到相关资料了，自己研究了下，具体整理出来，方便后面的人使用。 目录 博客配置 _config.yml配置详解 Hexo常用命">
@@ -175,70 +175,28 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd /Users/TangDan/GitHub/MyHexoBlog</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d  //推送到远端</span><br><span class="line">$ hexo server //本地查看</span><br></pre></td></tr></table></figure>
 <p>PS:运行中出现任何问题，可以先hexo clean再执行。</p>
 <h3 id="博客图标"><a href="#博客图标" class="headerlink" title="博客图标"></a>博客图标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  # /Users/TangDan/GitHub/MyHexoBlog/source/images/,按照你的图标名修改以下两行即可</span><br><span class="line">  small: /images/favicon-16x16-next.png</span><br><span class="line">  medium: /images/favicon-32x32-next.png</span><br></pre></td></tr></table></figure>
-<h2 id="config-yml配置详解"><a href="#config-yml配置详解" class="headerlink" title="_config.yml配置详解"></a>_config.yml配置详解</h2><h3 id="站点配置（重要）"><a href="#站点配置（重要）" class="headerlink" title="站点配置（重要）"></a>站点配置（重要）</h3><blockquote>
-</blockquote>
-<p>title: 博客名 //网站标题</p>
-<blockquote>
-</blockquote>
-<p>subtitle: To strive, to seek, to find  //网站副标题</p>
-<blockquote>
-</blockquote>
+<h2 id="config-yml配置详解"><a href="#config-yml配置详解" class="headerlink" title="_config.yml配置详解"></a>_config.yml配置详解</h2><h3 id="站点配置（重要）"><a href="#站点配置（重要）" class="headerlink" title="站点配置（重要）"></a>站点配置（重要）</h3><p>title: 博客名   //网站标题</p>
+<p>subtitle: To strive, to seek, to find   //网站副标题</p>
 <p>description: To strive, to seek, to find, and not to yield.  //网站描述</p>
-<blockquote>
-</blockquote>
 <p>author: WenBo  //您的名字</p>
-<blockquote>
-</blockquote>
 <p>language: zh-Hans  //网站使用的语言 简体中文 zh-Hans</p>
-<blockquote>
-</blockquote>
 <p>timezone:   //网站时区。Hexo 默认使用您电脑的时区</p>
-<h3 id="URL配置"><a href="#URL配置" class="headerlink" title="URL配置"></a>URL配置</h3><blockquote>
-</blockquote>
-<p>url: <a href="http://blogwenbo.com/" target="_blank" rel="noopener">http://blogwenbo.com/</a>   //网址</p>
-<blockquote>
-</blockquote>
+<h3 id="URL配置"><a href="#URL配置" class="headerlink" title="URL配置"></a>URL配置</h3><p>url: <a href="http://blogwenbo.com/" target="_blank" rel="noopener">http://blogwenbo.com/</a>   //网址</p>
 <p>root: /  //网站根目录</p>
-<blockquote>
-</blockquote>
 <p>permalink: :year/:month/:day/:title/  // 文章的 <a href="https://hexo.io/zh-cn/docs/permalinks.html" target="_blank" rel="noopener">永久链接</a> 格式 | <code>:year/:month/:day/:title/</code> |</p>
-<blockquote>
-</blockquote>
 <p>permalink_defaults:  //永久链接中各部分的默认值 </p>
 <p>###目录配置</p>
-<blockquote>
-</blockquote>
 <p>source_dir: source  //资源文件夹，这个文件夹用来存放内容。默认值：source</p>
-<blockquote>
-</blockquote>
 <p>public_dir: public  //公共文件夹，这个文件夹用于存放生成的站点文件。默认值：public</p>
-<blockquote>
-</blockquote>
 <p>tag_dir: tags  //标签文件夹 默认值：tags</p>
-<blockquote>
-</blockquote>
 <p>archive_dir: archives  //归档文件夹 默认值：archives</p>
-<blockquote>
-</blockquote>
 <p>category_dir: categories  //分类文件夹  默认值：categories</p>
-<blockquote>
-</blockquote>
 <p>code_dir: downloads/code  //Include code 文件夹 默认值：downloads/code</p>
-<blockquote>
-</blockquote>
 <p>i18n_dir: :lang  //国际化（i18n）文件夹 默认值：:lang</p>
-<blockquote>
-</blockquote>
 <p>skip_render: README.md  //跳过指定文件的渲染，您可使用 <a href="https://github.com/isaacs/node-glob" target="_blank" rel="noopener">glob 表达式</a>来匹配路径。</p>
 <p>###Git部署配置（重要）</p>
-<blockquote>
-</blockquote>
 <p>deploy:<br>  type: git //填git</p>
-<blockquote>
-</blockquote>
 <p>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:wenmobo/wenmobo.github.io.git  //SSH地址</p>
-<blockquote>
-</blockquote>
 <p>  branch: master  //分支</p>
 <h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><p>其实搭建成功后，在/Users/TangDan/GitHub/MyHexoBlog/source/_posts里默认会有生成一个hello-world.md，这个里面描述了常用的哪些命令及意义，可在里面查看。</p>
 
