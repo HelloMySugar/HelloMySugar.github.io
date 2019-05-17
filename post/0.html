@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="欢迎来到我的博客">
 <meta property="og:description" content="怎么使用Hexo编写博客前言由于网上太多关于github+hexo搭建教程，搭建这里就不多说了，推荐之前搭建参考的网址： 使用hexo+github搭建免费个人博客详细教程 GitPages+Hexo搭建个人博客 搭建完成后，怎么使用hexo这个框架，网页的排版这些就很难找到相关资料了，自己研究了下，具体整理出来，方便后面的人使用。 目录 博客功能配置 _config.yml基础配置 Hexo常">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-17T08:34:04.153Z">
+<meta property="og:updated_time" content="2019-05-17T08:37:01.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欢迎来到我的博客">
 <meta name="twitter:description" content="怎么使用Hexo编写博客前言由于网上太多关于github+hexo搭建教程，搭建这里就不多说了，推荐之前搭建参考的网址： 使用hexo+github搭建免费个人博客详细教程 GitPages+Hexo搭建个人博客 搭建完成后，怎么使用hexo这个框架，网页的排版这些就很难找到相关资料了，自己研究了下，具体整理出来，方便后面的人使用。 目录 博客功能配置 _config.yml基础配置 Hexo常">
@@ -199,6 +199,8 @@
 <p>###Git部署配置（重要）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git //填git</span><br><span class="line">  repo: git@github.com:wenmobo/wenmobo.github.io.git  //SSH地址</span><br><span class="line">  branch: master  //分支</span><br></pre></td></tr></table></figure>
 <h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><p>其实搭建成功后，在/Users/TangDan/GitHub/MyHexoBlog/source/_posts里默认会有生成一个hello-world.md，这个里面描述了常用的哪些命令及意义，可在里面查看。</p>
+<p>总体来说，提交一个修改，最好执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 
       
 
