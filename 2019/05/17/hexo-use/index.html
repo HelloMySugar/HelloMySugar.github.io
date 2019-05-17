@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/5 | 欢迎来到我的博客</title>
+  <title>欢迎来到我的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="怎么使用Hexo编写博客前言由于网上太多关于github+hexo搭建教程，搭建这里就不多说了，推荐之前搭建参考的网址： 使用hexo+github搭建免费个人博客详细教程 GitPages+Hexo搭建个人博客 搭建完成后，怎么使用hexo这个框架，网页的排版这些就很难找到相关资料了，自己研究了下，具体整理出来，方便后面的人使用。 目录 博客配置 _config.yml配置详解 Hexo常用命">
+<meta property="og:type" content="article">
 <meta property="og:title" content="欢迎来到我的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/05/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/05/17/hexo-use/index.html">
 <meta property="og:site_name" content="欢迎来到我的博客">
+<meta property="og:description" content="怎么使用Hexo编写博客前言由于网上太多关于github+hexo搭建教程，搭建这里就不多说了，推荐之前搭建参考的网址： 使用hexo+github搭建免费个人博客详细教程 GitPages+Hexo搭建个人博客 搭建完成后，怎么使用hexo这个框架，网页的排版这些就很难找到相关资料了，自己研究了下，具体整理出来，方便后面的人使用。 目录 博客配置 _config.yml配置详解 Hexo常用命">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-17T07:44:09.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欢迎来到我的博客">
+<meta name="twitter:description" content="怎么使用Hexo编写博客前言由于网上太多关于github+hexo搭建教程，搭建这里就不多说了，推荐之前搭建参考的网址： 使用hexo+github搭建免费个人博客详细教程 GitPages+Hexo搭建个人博客 搭建完成后，怎么使用hexo这个框架，网页的排版这些就很难找到相关资料了，自己研究了下，具体整理出来，方便后面的人使用。 目录 博客配置 _config.yml配置详解 Hexo常用命">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到我的博客" type="application/atom+xml">
   
@@ -150,70 +154,222 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hexo-use" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="怎么使用Hexo编写博客"><a href="#怎么使用Hexo编写博客" class="headerlink" title="怎么使用Hexo编写博客"></a>怎么使用Hexo编写博客</h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于网上太多关于github+hexo搭建教程，搭建这里就不多说了，推荐之前搭建参考的网址：</p>
+<p><a href="https://www.jianshu.com/p/201283bcd64a.html" target="_blank" rel="noopener">使用hexo+github搭建免费个人博客详细教程</a></p>
+<p><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">GitPages+Hexo搭建个人博客</a></p>
+<p>搭建完成后，怎么使用hexo这个框架，网页的排版这些就很难找到相关资料了，自己研究了下，具体整理出来，方便后面的人使用。</p>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li>博客配置</li>
+<li>_config.yml配置详解</li>
+<li>Hexo常用命令</li>
+</ul>
+<h2 id="博客配置"><a href="#博客配置" class="headerlink" title="博客配置"></a>博客配置</h2><h3 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h3><p>官方提供了些主题，这里放两个主题，其他可以自行度娘，博主更偏爱yilla主题，哈哈。到指定目录下clone。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /Users/TangDan/GitHub/MyHexoBlog/themes</span><br><span class="line">$ hexo clean</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/jekyll</span><br></pre></td></tr></table></figure>
+<p>现在themes目录下应该多了两个目录：yilia、jekyll，然后到_config.yml修改theme: yilia，再执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd /Users/TangDan/GitHub/MyHexoBlog</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d  //推送到远端</span><br><span class="line">$ hexo server //本地查看</span><br></pre></td></tr></table></figure>
+<p>PS:运行中出现任何问题，可以先hexo clean再执行。</p>
+<h3 id="博客图标"><a href="#博客图标" class="headerlink" title="博客图标"></a>博客图标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  # /Users/TangDan/GitHub/MyHexoBlog/source/images/,按照你的图标名修改以下两行即可</span><br><span class="line">  small: /images/favicon-16x16-next.png</span><br><span class="line">  medium: /images/favicon-32x32-next.png</span><br></pre></td></tr></table></figure>
+<h2 id="config-yml配置详解"><a href="#config-yml配置详解" class="headerlink" title="_config.yml配置详解"></a>_config.yml配置详解</h2><h3 id="站点配置（重要）"><a href="#站点配置（重要）" class="headerlink" title="站点配置（重要）"></a>站点配置（重要）</h3><blockquote>
+</blockquote>
+<p>title: 博客名 //网站标题</p>
+<blockquote>
+</blockquote>
+<p>subtitle: To strive, to seek, to find  //网站副标题</p>
+<blockquote>
+</blockquote>
+<p>description: To strive, to seek, to find, and not to yield.  //网站描述</p>
+<blockquote>
+</blockquote>
+<p>author: WenBo  //您的名字</p>
+<blockquote>
+</blockquote>
+<p>language: zh-Hans  //网站使用的语言 简体中文 zh-Hans</p>
+<blockquote>
+</blockquote>
+<p>timezone:   //网站时区。Hexo 默认使用您电脑的时区</p>
+<h3 id="URL配置"><a href="#URL配置" class="headerlink" title="URL配置"></a>URL配置</h3><blockquote>
+</blockquote>
+<p>url: <a href="http://blogwenbo.com/" target="_blank" rel="noopener">http://blogwenbo.com/</a>   //网址</p>
+<blockquote>
+</blockquote>
+<p>root: /  //网站根目录</p>
+<blockquote>
+</blockquote>
+<p>permalink: :year/:month/:day/:title/  // 文章的 <a href="https://hexo.io/zh-cn/docs/permalinks.html" target="_blank" rel="noopener">永久链接</a> 格式 | <code>:year/:month/:day/:title/</code> |</p>
+<blockquote>
+</blockquote>
+<p>permalink_defaults:  //永久链接中各部分的默认值 </p>
+<p>###目录配置</p>
+<blockquote>
+</blockquote>
+<p>source_dir: source  //资源文件夹，这个文件夹用来存放内容。默认值：source</p>
+<blockquote>
+</blockquote>
+<p>public_dir: public  //公共文件夹，这个文件夹用于存放生成的站点文件。默认值：public</p>
+<blockquote>
+</blockquote>
+<p>tag_dir: tags  //标签文件夹 默认值：tags</p>
+<blockquote>
+</blockquote>
+<p>archive_dir: archives  //归档文件夹 默认值：archives</p>
+<blockquote>
+</blockquote>
+<p>category_dir: categories  //分类文件夹  默认值：categories</p>
+<blockquote>
+</blockquote>
+<p>code_dir: downloads/code  //Include code 文件夹 默认值：downloads/code</p>
+<blockquote>
+</blockquote>
+<p>i18n_dir: :lang  //国际化（i18n）文件夹 默认值：:lang</p>
+<blockquote>
+</blockquote>
+<p>skip_render: README.md  //跳过指定文件的渲染，您可使用 <a href="https://github.com/isaacs/node-glob" target="_blank" rel="noopener">glob 表达式</a>来匹配路径。</p>
+<p>###Git部署配置（重要）</p>
+<blockquote>
+</blockquote>
+<p>deploy:<br>  type: git //填git</p>
+<blockquote>
+</blockquote>
+<p>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:wenmobo/wenmobo.github.io.git  //SSH地址</p>
+<blockquote>
+</blockquote>
+<p>  branch: master  //分支</p>
+<h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><p>其实搭建成功后，在/Users/TangDan/GitHub/MyHexoBlog/source/_posts里默认会有生成一个hello-world.md，这个里面描述了常用的哪些命令及意义，可在里面查看。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/17/hexo-use/" class="archive-article-date">
-  	<time datetime="2019-05-17T06:09:44.404Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/17/hexo-use/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/16/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-16T09:20:25.642Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/16/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -236,8 +392,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
