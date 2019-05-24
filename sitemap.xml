@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.tea-room.cn/404.html</loc>
+    
+    <lastmod>2019-05-24T08:37:51.291Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.tea-room.cn/post/4f821c45.html</loc>
     
     <lastmod>2019-05-24T08:31:41.700Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://blog.tea-room.cn/archives/index.html</loc>
     
     <lastmod>2019-05-24T06:14:56.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.tea-room.cn/404.html</loc>
-    
-    <lastmod>2019-05-07T11:34:10.000Z</lastmod>
     
   </url>
   
