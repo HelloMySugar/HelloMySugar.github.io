@@ -35,7 +35,7 @@
     <link href="https://blog.tea-room.cn/post/dff23fd2.html"/>
     <id>https://blog.tea-room.cn/post/dff23fd2.html</id>
     <published>2018-08-24T09:42:27.000Z</published>
-    <updated>2019-05-27T05:51:56.446Z</updated>
+    <updated>2019-05-27T06:18:59.642Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前段时间用Object-C正在开发一个项目，开发了差不多百分之七八十了，客户通知要求改成Swift语言开发（因为他只会Swift），好吧，一个项目用Swift来写其实也无可厚非，但是这个项目中途来换，可想而知是多么痛苦的事，已经写了好多个OC类。</p><a id="more"></a><h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="调研"><a href="#调研" class="headerlink" title="调研"></a>调研</h2><p>之前一开始也在网上找了很多资料，有OC与Swift对应功能的语法解说，也有贴代码用工具直接转的，用过iSwift，但不是很好用，识别率不高，正确率不高。</p><p>这些都感觉比较费时（客户只给了一周的时间），然后就在想，有没有一个是直接可以转工程的工具呢？别说，强大的google还真搜出来了，这个软件可以直接转换工程。</p><h2 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h2><p>这个软件叫什么名呢，也不卖关子了，是一个在线转换的网站：</p><p><a href="https://objectivec2swift.com/#/converter/code/" target="_blank" rel="noopener">OC2Swift</a></p><p>它是提供少量代码免费转换，大家可转换自己的部分代码看看正确性，还可以在线输出Swift代码结果，它可以单文件、文件夹或工程打包在线转换。</p><p>不过呢，好的软件都是收费的，具体资费我就不说了（避免托的嫌疑，有需要的上官网自己看吧），对于转换的成本来说这个价格很便宜了。</p><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><ul><li><ol><li>给大家一个建议，这个购买后使用有流量限制，建议打包的时候把静态库、framwork、SDK、第三方库等相关的剔除后打包上传，转换成功后再放置到对应路径下。</li></ol></li><li><ol start="2"><li>原OC代码留存（原因见下面）。</li></ol></li></ul><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p><strong>这个工程转换成功后，使用起来就没有一点问题了吗？</strong></p><p>错错错，当初我记得一开始报错不怎么多几十个吧，关键改完后，不断的重编译就暴露更多的错，这样下来估计也改了有几百个错了。</p><h4 id="是什么类型的错误"><a href="#是什么类型的错误" class="headerlink" title="是什么类型的错误"></a>是什么类型的错误</h4><ul><li><ol><li>很多都是语法的错误，而Xcode有提示修正的方法，直接鼠标点点点就改好了，比较轻松。</li></ol></li><li><ol start="2"><li>有些是语法不识别的问题，这个就需要自己查资料对应OC代码寻找对应的Swift代码了，所以要留存原OC代码。</li></ol></li><li><ol start="3"><li>有些工程设置的地方报错，但是这个很少，就几处，百度google就能解决。</li></ol></li></ul><p>然后，到了这一步，以为万事大吉了吗？哈哈，并没有，因为有些地方转换虽说没报错，但是可能会转错意，需要测试整体流程跑下，切记。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总体来说，这次的转换是很成功的，原本估时为一周，但是实际2～3天就完成了转换，比较高效率，所以建议大家转换Swift可采取这种方式。</p><p>比较遗憾的是，当时时间比较赶，没来得及截图留存给大家，如果觉得文章上有什么疑问，或者实际实践过程中遇到什么问题，欢迎大家在下方留言告诉我，我会第一时间回复你。</p>]]></content>
     
@@ -45,9 +45,9 @@
     
     </summary>
     
-      <category term="Object-C" scheme="https://blog.tea-room.cn/categories/Object-C/"/>
+      <category term="iOS" scheme="https://blog.tea-room.cn/categories/iOS/"/>
     
-      <category term="Swift" scheme="https://blog.tea-room.cn/categories/Object-C/Swift/"/>
+      <category term="Swift" scheme="https://blog.tea-room.cn/categories/iOS/Swift/"/>
     
     
       <category term="Object-C" scheme="https://blog.tea-room.cn/tags/Object-C/"/>
