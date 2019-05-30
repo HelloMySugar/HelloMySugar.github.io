@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>iPad控制多屏电视</title>
+      <link href="/post/a503d77d.html"/>
+      <url>/post/a503d77d.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我们公司有4个电视（内置机顶盒），用来展示公司的业务，平时经常会有客户来参观，电视下面是通过HDMI线连接的电脑，展示的实际是网页。</p><p><img src="https://i.loli.net/2019/05/30/5cef8c97a983892634.jpg" alt="4BDE00EBDACCF66E3B34142622545B5A.jpg"></p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>昨天下午领导提一个需求，因为演示的时候，需要操作，就得用电脑的鼠标在电视上点，屏幕太大鼠标又在电视下方，很不方便，不好操作，然后想借鉴别人公司，直接用iPad里控制4个电视，来操作。</p><a id="more"></a><h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h2><p><strong>用iPad来控制电视屏幕，是不是一听就很高大？</strong></p><p>哈哈，怎么控制？都不是一个系统，一个是windows系统，一个是iOS系统。讨论时，我提出了两个方案：</p><ul><li><ol><li>做个APP，把网页内嵌到里面，直接用自带的AirPlay把iPad投屏到电视，不用的电视，再切换投屏，这样在iPad上操作就会同步到电视。</li></ol></li><li><ol start="2"><li>因为展示的业务是web页，那么就用APP，在同一局域网给Web端发指令，或通过后台中转指令，以控制在电视上展示的网页。</li></ol></li></ul><h2 id="调研"><a href="#调研" class="headerlink" title="调研"></a>调研</h2><h3 id="1-投屏方案"><a href="#1-投屏方案" class="headerlink" title="1. 投屏方案"></a>1. 投屏方案</h3><p>这个方案，实际是时间成本最少的，说干就干，然后马上我这边就起了一个项目，嵌了一个网页在APP里，好吧，正式开始投屏，然后…</p><h4 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h4><p>投屏是成功了的，但是呢，因为电视的屏幕比是16:9，而iPad是4:3，导致了在电视上，iPad的投屏屏幕显示不全，两边还有间隙，不是全屏，而且当初web端开发的网页尺寸也是固定的1920x1080，也就是为电视量身定做的，这个网页在iPad上也不能全屏显示。</p><p>这种硬件上及网页端的限制，不好改变，就放弃了这种方式。</p><h3 id="2-指令控制方案"><a href="#2-指令控制方案" class="headerlink" title="2. 指令控制方案"></a>2. 指令控制方案</h3><p>这个方案，需要和web端约定很多指令，基本指令像点击不同按钮的不同指令，而且比如上下滑动网页的距离，由于屏幕分辨率不一样，需要经过一定转换，才能是web端的对应距离等等问题。</p><h4 id="结果：-1"><a href="#结果：-1" class="headerlink" title="结果："></a>结果：</h4><p>诚如上面所说，这个开发成本会很大，而且有局限性，一旦网页内容改变，APP端需改动代码升级才能使用，这种做法不符合产品经理的预期，所以直接淘汰了。</p><h2 id="另辟蹊径"><a href="#另辟蹊径" class="headerlink" title="另辟蹊径"></a>另辟蹊径</h2><p>上面的两个方案告吹后，给产品经理说了结果，然后产品经理在网上找到了另一种方案，就是市面上这种类似TeamViewer的远程操控桌面软件，直接在iPad上安装软件，然后在PC上安装同样软件，使用iPad操控PC桌面。</p><h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>有了这个方案，就在网上找到了<a href="https://sunlogin.oray.com/zh_CN/" target="_blank" rel="noopener">向日葵</a>、<a href="https://www.splashtop.com/cn" target="_blank" rel="noopener">Splashtop</a>，这两个软件支持多端连接。</p><h4 id="1-向日葵"><a href="#1-向日葵" class="headerlink" title="1. 向日葵"></a>1. 向日葵</h4><p>安装和使用都比较傻瓜，比较符合中国人的操作习惯，每次连接PC端都需要输入验证码（PC端的向日葵软件上），这样的话，每次切换连接不同电脑比较慢，操作体验不好。</p><p><img src="https://i.loli.net/2019/05/30/5cefa66c0e85747877.png" alt="BAB22DB7-DCF2-460C-A034-F576BB64AF0F.png"></p><h4 id="2-Splashtop"><a href="#2-Splashtop" class="headerlink" title="2.Splashtop"></a>2.Splashtop</h4><p>同样的，安装和使用都比较傻瓜，是国外软件，偏风格欧美风，我其实比较喜欢这种操作方式，简单易懂，连接同一个电脑，连续输入两次验证码，下次再点击接该电脑就直接连接了。</p><p><img src="https://i.loli.net/2019/05/30/5cefa66bdd93468731.jpg" alt="28ABD3EAB7E73EC5D89DD79D1255881D.jpg"></p><p><strong>对比这两个软件，Splashtop切换不同电脑连接要更快些，而且不用每次都输验证码，相对方便些，所以就给产品经理推荐了这个软件来操作。</strong></p><h3 id="最终方案"><a href="#最终方案" class="headerlink" title="最终方案"></a>最终方案</h3><p>哈哈，以为这就OK了吗，NO，今天来公司，产品经理说昨晚给CEO看了，CEO觉得这样切换还是太慢，给了个建议，让4个电视通过HDMI方式连到一个电脑上，这样的话就用iPad操控一台电脑就可以了，不存在切换慢的问题了，仔细想了下，这种方案还真不错，有可行性，然后开撸，将4台电视连接到了一台电脑上（专门有HDMI拓展外接，所以接口足够），然后分屏显示。</p><h4 id="1-Splashtop连接："><a href="#1-Splashtop连接：" class="headerlink" title="1. Splashtop连接："></a>1. Splashtop连接：</h4><p>其实我真的是蛮喜欢Splashtop的，操作简单，可惜的是Splashtop只支持双屏显示，切换分屏始终只显示第1第2分屏。</p><p><img src="https://i.loli.net/2019/05/30/5cefa66c15f5d36721.png" alt="DDC6ECBC-354F-477B-9DE6-930C9D6395BC.png"></p><h4 id="2-向日葵连接："><a href="#2-向日葵连接：" class="headerlink" title="2.向日葵连接："></a>2.向日葵连接：</h4><p>换了向日葵来连接，满怀期望的希望它支持多屏，结果不负众望，4台分屏完美切换，速度流畅。</p><p><img src="https://i.loli.net/2019/05/30/5cefa66c1250218113.png" alt="B6B92F41-17AA-49AF-B2EF-73869B6C73F8.png"></p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总的来说，这次需求完成还是比较满意的，上面领导也满意这个结果，这次分享希望能给需要iPad控制多屏电视的人带来帮助，有什么问题请下留言区告诉我吧。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> iPad </tag>
+            
+            <tag> 多屏控制 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue框架底层原理</title>
       <link href="/post/d32be447.html"/>
       <url>/post/d32be447.html</url>
