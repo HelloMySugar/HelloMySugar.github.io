@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.tea-room.cn/"/>
+  <link href="https://tangyanqiong.com/"/>
   <updated>2019-06-06T02:00:27.137Z</updated>
-  <id>https://blog.tea-room.cn/</id>
+  <id>https://tangyanqiong.com/</id>
   
   <author>
     <name>Root</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Swift上View手势控制</title>
-    <link href="https://blog.tea-room.cn/post/a17aa0f4.html"/>
-    <id>https://blog.tea-room.cn/post/a17aa0f4.html</id>
+    <link href="https://tangyanqiong.com/post/a17aa0f4.html"/>
+    <id>https://tangyanqiong.com/post/a17aa0f4.html</id>
     <published>2019-06-03T07:31:20.000Z</published>
     <updated>2019-06-06T02:00:27.137Z</updated>
     
@@ -32,21 +32,21 @@
     
     </summary>
     
-      <category term="iOS" scheme="https://blog.tea-room.cn/categories/iOS/"/>
+      <category term="iOS" scheme="https://tangyanqiong.com/categories/iOS/"/>
     
-      <category term="Swift" scheme="https://blog.tea-room.cn/categories/iOS/Swift/"/>
+      <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="Swift" scheme="https://blog.tea-room.cn/tags/Swift/"/>
+      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
     
-      <category term="手势控制" scheme="https://blog.tea-room.cn/tags/%E6%89%8B%E5%8A%BF%E6%8E%A7%E5%88%B6/"/>
+      <category term="手势控制" scheme="https://tangyanqiong.com/tags/%E6%89%8B%E5%8A%BF%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
   <entry>
     <title>iPad控制多屏电视</title>
-    <link href="https://blog.tea-room.cn/post/a503d77d.html"/>
-    <id>https://blog.tea-room.cn/post/a503d77d.html</id>
+    <link href="https://tangyanqiong.com/post/a503d77d.html"/>
+    <id>https://tangyanqiong.com/post/a503d77d.html</id>
     <published>2019-05-30T07:46:42.000Z</published>
     <updated>2019-05-31T06:24:59.678Z</updated>
     
@@ -61,23 +61,23 @@
     
     </summary>
     
-      <category term="基本操作" scheme="https://blog.tea-room.cn/categories/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+      <category term="基本操作" scheme="https://tangyanqiong.com/categories/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     
     
-      <category term="iPad控制多屏" scheme="https://blog.tea-room.cn/tags/iPad%E6%8E%A7%E5%88%B6%E5%A4%9A%E5%B1%8F/"/>
+      <category term="iPad控制多屏" scheme="https://tangyanqiong.com/tags/iPad%E6%8E%A7%E5%88%B6%E5%A4%9A%E5%B1%8F/"/>
     
-      <category term="远程桌面控制" scheme="https://blog.tea-room.cn/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%8E%A7%E5%88%B6/"/>
+      <category term="远程桌面控制" scheme="https://tangyanqiong.com/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%8E%A7%E5%88%B6/"/>
     
-      <category term="向日葵" scheme="https://blog.tea-room.cn/tags/%E5%90%91%E6%97%A5%E8%91%B5/"/>
+      <category term="向日葵" scheme="https://tangyanqiong.com/tags/%E5%90%91%E6%97%A5%E8%91%B5/"/>
     
-      <category term="Splashtop" scheme="https://blog.tea-room.cn/tags/Splashtop/"/>
+      <category term="Splashtop" scheme="https://tangyanqiong.com/tags/Splashtop/"/>
     
   </entry>
   
   <entry>
     <title>Vue框架底层原理</title>
-    <link href="https://blog.tea-room.cn/post/d32be447.html"/>
-    <id>https://blog.tea-room.cn/post/d32be447.html</id>
+    <link href="https://tangyanqiong.com/post/d32be447.html"/>
+    <id>https://tangyanqiong.com/post/d32be447.html</id>
     <published>2019-03-20T09:58:17.000Z</published>
     <updated>2019-06-06T02:00:47.815Z</updated>
     
@@ -92,23 +92,23 @@
     
     </summary>
     
-      <category term="Web前端" scheme="https://blog.tea-room.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+      <category term="Web前端" scheme="https://tangyanqiong.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Vue" scheme="https://blog.tea-room.cn/categories/Web%E5%89%8D%E7%AB%AF/Vue/"/>
+      <category term="Vue" scheme="https://tangyanqiong.com/categories/Web%E5%89%8D%E7%AB%AF/Vue/"/>
     
     
-      <category term="Vue" scheme="https://blog.tea-room.cn/tags/Vue/"/>
+      <category term="Vue" scheme="https://tangyanqiong.com/tags/Vue/"/>
     
-      <category term="Web" scheme="https://blog.tea-room.cn/tags/Web/"/>
+      <category term="Web" scheme="https://tangyanqiong.com/tags/Web/"/>
     
-      <category term="MVVM" scheme="https://blog.tea-room.cn/tags/MVVM/"/>
+      <category term="MVVM" scheme="https://tangyanqiong.com/tags/MVVM/"/>
     
   </entry>
   
   <entry>
     <title>Swift中UILabel设置角标</title>
-    <link href="https://blog.tea-room.cn/post/f0789496.html"/>
-    <id>https://blog.tea-room.cn/post/f0789496.html</id>
+    <link href="https://tangyanqiong.com/post/f0789496.html"/>
+    <id>https://tangyanqiong.com/post/f0789496.html</id>
     <published>2018-12-20T07:10:08.000Z</published>
     <updated>2019-06-06T01:48:00.876Z</updated>
     
@@ -123,21 +123,21 @@
     
     </summary>
     
-      <category term="iOS" scheme="https://blog.tea-room.cn/categories/iOS/"/>
+      <category term="iOS" scheme="https://tangyanqiong.com/categories/iOS/"/>
     
-      <category term="Swift" scheme="https://blog.tea-room.cn/categories/iOS/Swift/"/>
+      <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="Swift" scheme="https://blog.tea-room.cn/tags/Swift/"/>
+      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
     
-      <category term="角标" scheme="https://blog.tea-room.cn/tags/%E8%A7%92%E6%A0%87/"/>
+      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
     
   </entry>
   
   <entry>
     <title>iOS纯播放器（适配器）</title>
-    <link href="https://blog.tea-room.cn/post/4d0d70a6.html"/>
-    <id>https://blog.tea-room.cn/post/4d0d70a6.html</id>
+    <link href="https://tangyanqiong.com/post/4d0d70a6.html"/>
+    <id>https://tangyanqiong.com/post/4d0d70a6.html</id>
     <published>2018-10-06T02:45:35.000Z</published>
     <updated>2019-06-06T07:11:27.589Z</updated>
     
@@ -150,25 +150,25 @@
     
     </summary>
     
-      <category term="iOS" scheme="https://blog.tea-room.cn/categories/iOS/"/>
+      <category term="iOS" scheme="https://tangyanqiong.com/categories/iOS/"/>
     
-      <category term="OC" scheme="https://blog.tea-room.cn/categories/iOS/OC/"/>
+      <category term="OC" scheme="https://tangyanqiong.com/categories/iOS/OC/"/>
     
     
-      <category term="Object-C" scheme="https://blog.tea-room.cn/tags/Object-C/"/>
+      <category term="Object-C" scheme="https://tangyanqiong.com/tags/Object-C/"/>
     
-      <category term="AVPlayer" scheme="https://blog.tea-room.cn/tags/AVPlayer/"/>
+      <category term="AVPlayer" scheme="https://tangyanqiong.com/tags/AVPlayer/"/>
     
-      <category term="DRMPlayer" scheme="https://blog.tea-room.cn/tags/DRMPlayer/"/>
+      <category term="DRMPlayer" scheme="https://tangyanqiong.com/tags/DRMPlayer/"/>
     
-      <category term="适配器" scheme="https://blog.tea-room.cn/tags/%E9%80%82%E9%85%8D%E5%99%A8/"/>
+      <category term="适配器" scheme="https://tangyanqiong.com/tags/%E9%80%82%E9%85%8D%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>OC工程怎么转换为Swift工程</title>
-    <link href="https://blog.tea-room.cn/post/dff23fd2.html"/>
-    <id>https://blog.tea-room.cn/post/dff23fd2.html</id>
+    <link href="https://tangyanqiong.com/post/dff23fd2.html"/>
+    <id>https://tangyanqiong.com/post/dff23fd2.html</id>
     <published>2018-08-24T09:42:27.000Z</published>
     <updated>2019-05-27T06:32:07.471Z</updated>
     
@@ -180,21 +180,21 @@
     
     </summary>
     
-      <category term="iOS" scheme="https://blog.tea-room.cn/categories/iOS/"/>
+      <category term="iOS" scheme="https://tangyanqiong.com/categories/iOS/"/>
     
-      <category term="Swift" scheme="https://blog.tea-room.cn/categories/iOS/Swift/"/>
+      <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="Swift" scheme="https://blog.tea-room.cn/tags/Swift/"/>
+      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
     
-      <category term="Object-C" scheme="https://blog.tea-room.cn/tags/Object-C/"/>
+      <category term="Object-C" scheme="https://tangyanqiong.com/tags/Object-C/"/>
     
   </entry>
   
   <entry>
     <title>怎么使用Hexo编写博客</title>
-    <link href="https://blog.tea-room.cn/post/4f821c45.html"/>
-    <id>https://blog.tea-room.cn/post/4f821c45.html</id>
+    <link href="https://tangyanqiong.com/post/4f821c45.html"/>
+    <id>https://tangyanqiong.com/post/4f821c45.html</id>
     <published>2018-05-18T07:39:43.000Z</published>
     <updated>2019-05-27T06:45:04.611Z</updated>
     
@@ -209,19 +209,19 @@
     
     </summary>
     
-      <category term="Hexo" scheme="https://blog.tea-room.cn/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://tangyanqiong.com/categories/Hexo/"/>
     
     
-      <category term="Hexo命令" scheme="https://blog.tea-room.cn/tags/Hexo%E5%91%BD%E4%BB%A4/"/>
+      <category term="Hexo命令" scheme="https://tangyanqiong.com/tags/Hexo%E5%91%BD%E4%BB%A4/"/>
     
-      <category term="Material-X主题" scheme="https://blog.tea-room.cn/tags/Material-X%E4%B8%BB%E9%A2%98/"/>
+      <category term="Material-X主题" scheme="https://tangyanqiong.com/tags/Material-X%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>iOS流媒体播放器</title>
-    <link href="https://blog.tea-room.cn/post/70bc6a39.html"/>
-    <id>https://blog.tea-room.cn/post/70bc6a39.html</id>
+    <link href="https://tangyanqiong.com/post/70bc6a39.html"/>
+    <id>https://tangyanqiong.com/post/70bc6a39.html</id>
     <published>2017-03-05T03:02:20.000Z</published>
     <updated>2019-06-06T07:07:34.901Z</updated>
     
@@ -234,14 +234,14 @@
     
     </summary>
     
-      <category term="iOS" scheme="https://blog.tea-room.cn/categories/iOS/"/>
+      <category term="iOS" scheme="https://tangyanqiong.com/categories/iOS/"/>
     
-      <category term="OC" scheme="https://blog.tea-room.cn/categories/iOS/OC/"/>
+      <category term="OC" scheme="https://tangyanqiong.com/categories/iOS/OC/"/>
     
     
-      <category term="Object-C" scheme="https://blog.tea-room.cn/tags/Object-C/"/>
+      <category term="Object-C" scheme="https://tangyanqiong.com/tags/Object-C/"/>
     
-      <category term="播放器" scheme="https://blog.tea-room.cn/tags/%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+      <category term="播放器" scheme="https://tangyanqiong.com/tags/%E6%92%AD%E6%94%BE%E5%99%A8/"/>
     
   </entry>
   
