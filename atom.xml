@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangyanqiong.com/"/>
-  <updated>2019-08-01T06:12:17.639Z</updated>
+  <updated>2019-08-01T06:44:23.654Z</updated>
   <id>https://tangyanqiong.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://tangyanqiong.com/post/52c1147f.html"/>
     <id>https://tangyanqiong.com/post/52c1147f.html</id>
     <published>2019-08-01T03:52:00.000Z</published>
-    <updated>2019-08-01T06:12:17.639Z</updated>
+    <updated>2019-08-01T06:44:23.654Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>在main.js文件中import <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><p>ERROR  Failed to compile with 1 errors </p><p>This relative module was not found:</p><ul><li>../theme/index.css in ./src/main.js  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line">### 原因</span><br><span class="line"></span><br><span class="line">原来在webpack.base.conf.js中有导入过如下代码，可能是webpack.base.conf.js和utils.js重复编译SCSS文件导致报错。</span><br></pre></td></tr></table></figure></li></ul><p>// 导入SCSS<br>{<br>   test: /.(scss|css)?$/,<br>   loaders: [“style”, “css”, “sass”]<br>}<br><code>`</code></p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>删除上述在webpack.base.conf.js中导入的SCSS代码，即可。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>在main.js文件中import <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><p>ERROR  Failed to compile with 1 errors </p><p>This relative module was not found:</p><ul><li>../theme/index.css in ./src/main.js </li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">是什么原因导致的？怎么解决？</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line">### 原因</span><br><span class="line"></span><br><span class="line">原来在webpack.base.conf.js中有导入过如下代码，可能是webpack.base.conf.js和utils.js重复编译SCSS文件导致报错。</span><br></pre></td></tr></table></figure><p>// 导入SCSS<br>{<br>   test: /.(scss|css)?$/,<br>   loaders: [“style”, “css”, “sass”]<br>}<br><code>`</code></p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>删除上述在webpack.base.conf.js中导入的SCSS代码，即可。</p>]]></content>
     
     <summary type="html">
     
@@ -246,9 +246,9 @@
       <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
-    
       <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
+    
+      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
     
   </entry>
   
