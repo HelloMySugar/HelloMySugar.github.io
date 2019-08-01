@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangyanqiong.com/"/>
-  <updated>2019-08-01T06:44:23.654Z</updated>
+  <updated>2019-08-01T06:47:43.497Z</updated>
   <id>https://tangyanqiong.com/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="https://tangyanqiong.com/post/52c1147f.html"/>
     <id>https://tangyanqiong.com/post/52c1147f.html</id>
     <published>2019-08-01T03:52:00.000Z</published>
-    <updated>2019-08-01T06:44:23.654Z</updated>
+    <updated>2019-08-01T06:47:43.497Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>在main.js文件中import <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><p>ERROR  Failed to compile with 1 errors </p><p>This relative module was not found:</p><ul><li>../theme/index.css in ./src/main.js </li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">是什么原因导致的？怎么解决？</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line">### 原因</span><br><span class="line"></span><br><span class="line">原来在webpack.base.conf.js中有导入过如下代码，可能是webpack.base.conf.js和utils.js重复编译SCSS文件导致报错。</span><br></pre></td></tr></table></figure><p>// 导入SCSS<br>{<br>   test: /.(scss|css)?$/,<br>   loaders: [“style”, “css”, “sass”]<br>}<br><code>`</code></p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>删除上述在webpack.base.conf.js中导入的SCSS代码，即可。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>在main.js文件中import<strong>‘../theme/index.css’</strong> 报错：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ERROR  Failed to compile with 1 errors </span><br><span class="line">                                                                                                                                                                                             </span><br><span class="line">This relative module was not found:</span><br><span class="line"></span><br><span class="line">* ../theme/index.css in ./src/main.js</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>原来在webpack.base.conf.js中有导入过如下代码，可能是webpack.base.conf.js和utils.js重复编译SCSS文件导致报错。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 导入SCSS</span><br><span class="line">&#123;</span><br><span class="line">   test: /\.(scss|css)?$/,</span><br><span class="line">   loaders: [&quot;style&quot;, &quot;css&quot;, &quot;sass&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>删除上述在webpack.base.conf.js中导入的SCSS代码，即可。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;在main.js文件中import &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class
-      
+      &lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;在main.js文件中import&lt;strong&gt;‘../theme/index.css’&lt;/strong&gt; 报错：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR  Failed to compile with 1 errors &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                                                                                                                                                             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;This relative module was not found:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* ../theme/index.css in ./src/main.js&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -246,9 +244,9 @@
       <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
-    
       <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
+    
+      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
     
   </entry>
   
