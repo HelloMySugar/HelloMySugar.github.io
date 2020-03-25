@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangyanqiong.com/"/>
-  <updated>2019-08-01T06:47:43.497Z</updated>
+  <updated>2020-03-25T07:57:04.577Z</updated>
   <id>https://tangyanqiong.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>跨平台RN与Flutter对比及学习</title>
+    <link href="https://tangyanqiong.com/post/196a8be9.html"/>
+    <id>https://tangyanqiong.com/post/196a8be9.html</id>
+    <published>2020-03-25T07:42:34.000Z</published>
+    <updated>2020-03-25T07:57:04.577Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="纠结"><a href="#纠结" class="headerlink" title="纠结"></a>纠结</h2><p>最近想学跨平台开发，在RN和Flutter中纠结学哪个，看了资料RN对Web前端比较友好，都是JS开发语言，比较容易上手，但是有个以前的iOS同事，他现在已经用Flutter着手在开发iOS、Android了，据他说很好用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;h2 id=&quot;纠结&quot;&gt;&lt;a href=&quot;#纠结&quot; class=&quot;headerlink&quot; title=&quot;纠结&quot;&gt;&lt;/a&gt;纠结&lt;/h2&gt;&lt;p&gt;最近想
+      
+    
+    </summary>
+    
+    
+      <category term="RN" scheme="https://tangyanqiong.com/tags/RN/"/>
+    
+      <category term="Flutter" scheme="https://tangyanqiong.com/tags/Flutter/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue主题import出错</title>
@@ -568,34 +593,6 @@
       <category term="SDWebImage" scheme="https://tangyanqiong.com/tags/SDWebImage/"/>
     
       <category term="图片缓存" scheme="https://tangyanqiong.com/tags/%E5%9B%BE%E7%89%87%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web设置Cookie</title>
-    <link href="https://tangyanqiong.com/post/e189a0d8.html"/>
-    <id>https://tangyanqiong.com/post/e189a0d8.html</id>
-    <published>2018-05-03T03:32:13.000Z</published>
-    <updated>2019-07-26T06:46:04.507Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="设置Cookie总结"><a href="#设置Cookie总结" class="headerlink" title="设置Cookie总结"></a>设置Cookie总结</h3><a id="more"></a><p>代码记录</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 收藏功能</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">addFavorite</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> title = <span class="string">'意法半导体STM32/STM8技术社区 - 提供最新的ST资讯和技术交流'</span>;</span><br><span class="line">   <span class="keyword">var</span> URL = <span class="string">'http://www.stmcu.org.cn/'</span>; </span><br><span class="line">   <span class="comment">// IE10</span></span><br><span class="line">   <span class="keyword">if</span>(<span class="built_in">document</span>.all) &#123;</span><br><span class="line">     <span class="built_in">window</span>.external.addFavorite(URL, title);</span><br><span class="line">   &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">     alert(<span class="string">'手动 Ctrl+D 可以收藏我们的网站哦'</span>);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 设置cookie，同一域名都可获取</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">name, value, exdays</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> exdays = exdays || <span class="number">1024</span>;</span><br><span class="line">   <span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">   d.setTime(d.getTime() + (exdays * <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>));</span><br><span class="line">   <span class="built_in">document</span>.cookie = name + <span class="string">"="</span> + <span class="built_in">escape</span>(value) + <span class="string">";path=/;expires="</span> + d.toGMTString();</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">// 读取cookies，判断是否存在设置的name</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> name = name + <span class="string">"="</span>;</span><br><span class="line">   <span class="keyword">var</span> ca = <span class="built_in">document</span>.cookie.split(<span class="string">';'</span>);</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; ca.length; i++) &#123;</span><br><span class="line">     <span class="keyword">var</span> c = ca[i].trim();</span><br><span class="line">     <span class="keyword">if</span> (c.indexOf(name) == <span class="number">0</span>) &#123;</span><br><span class="line">       <span class="keyword">return</span> c.substring(name.length, c.length);</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">checkCookie</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> user = getCookie(<span class="string">"msgCookie"</span>);</span><br><span class="line">   <span class="keyword">var</span> width = <span class="built_in">window</span>.innerWidth||<span class="built_in">document</span>.documentElement.clientWidth||<span class="built_in">document</span>.body.clientWidth;</span><br><span class="line">   <span class="keyword">if</span>(width &gt;= <span class="number">1080</span>) &#123;</span><br><span class="line">     <span class="keyword">if</span> (user != <span class="string">""</span>) &#123;</span><br><span class="line">       msgHide();</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">       msgShow();</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 关闭时设置cookie</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">closeModal</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   msgHide();</span><br><span class="line">   setCookie(<span class="string">"msgCookie"</span>, <span class="string">'msgCookie'</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">msgHide</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">document</span>.getElementById(<span class="string">'newsTipsModal'</span>).style.display = <span class="string">'none'</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">msgShow</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">document</span>.getElementById(<span class="string">'newsTipsModal'</span>).style.display = <span class="string">'block'</span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// init</span></span><br><span class="line"> checkCookie();</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;设置Cookie总结&quot;&gt;&lt;a href=&quot;#设置Cookie总结&quot; class=&quot;headerlink&quot; title=&quot;设置Cookie总结&quot;&gt;&lt;/a&gt;设置Cookie总结&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="https://tangyanqiong.com/categories/Web/"/>
-    
-      <category term="JS" scheme="https://tangyanqiong.com/categories/Web/JS/"/>
-    
-    
-      <category term="JavaScript" scheme="https://tangyanqiong.com/tags/JavaScript/"/>
-    
-      <category term="Cookie" scheme="https://tangyanqiong.com/tags/Cookie/"/>
-    
-      <category term="Web" scheme="https://tangyanqiong.com/tags/Web/"/>
     
   </entry>
   

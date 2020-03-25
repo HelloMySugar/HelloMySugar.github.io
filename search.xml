@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>跨平台RN与Flutter对比及学习</title>
+      <link href="/post/196a8be9.html"/>
+      <url>/post/196a8be9.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="纠结"><a href="#纠结" class="headerlink" title="纠结"></a>纠结</h2><p>最近想学跨平台开发，在RN和Flutter中纠结学哪个，看了资料RN对Web前端比较友好，都是JS开发语言，比较容易上手，但是有个以前的iOS同事，他现在已经用Flutter着手在开发iOS、Android了，据他说很好用。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> RN </tag>
+            
+            <tag> Flutter </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue主题import出错</title>
       <link href="/post/52c1147f.html"/>
       <url>/post/52c1147f.html</url>
