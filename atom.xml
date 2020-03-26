@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangyanqiong.com/"/>
-  <updated>2020-03-25T09:04:29.340Z</updated>
+  <updated>2020-03-26T07:10:17.078Z</updated>
   <id>https://tangyanqiong.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS及Web使用语言的特性</title>
+    <link href="https://tangyanqiong.com/post/4546698d.html"/>
+    <id>https://tangyanqiong.com/post/4546698d.html</id>
+    <published>2019-09-16T03:07:38.000Z</published>
+    <updated>2020-03-26T07:10:17.078Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我目前使用过的语言有Object-C、Swift、JavaScript，那它们到底是什么类型的静态语言，以及什么强弱类型语言，很多同学只是简单的背出它们是什么语言及类型，但并没有理解到，现在来举例说明和分享一下。</p><a id="more"></a><h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><h2 id="Object-C"><a href="#Object-C" class="headerlink" title="Object-C"></a>Object-C</h2><p>我用的最多的当然是Object-C，毕竟是做iOS开发出身，对这个语言了解最深。首先，因为黑魔法RunTime机制，Object-C是一个运行时的<strong>动态类型的强类型语言</strong>，举例如下：</p><ol><li>以下两种情况都可以看出，Xcode编译时并不会报错，说明是一个<em>动态语言</em>，运行时才会去检验类型</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NSString *test = @&quot;1231231&quot;;</span><br><span class="line">test = [[NSDate alloc] init];</span><br><span class="line"></span><br><span class="line">NSDate *test2 = @&quot;1231231&quot;; // test2的真实类型是什么，运行时会得到String类型，并不是声明时的NSDate类型</span><br></pre></td></tr></table></figure><ol start="2"><li>Object-C是<em>强类型语言</em>，因为变量必须声明类型才能使用，说实话，Object-C的代码简洁性，是真的不怎么高</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSString *certsPath = [[NSBundle mainBundle] pathForResource:@&quot;server&quot; ofType:@&quot;crt&quot;];</span><br><span class="line">NSError *error;</span><br><span class="line">NSString *contentInUTF8 = [NSString stringWithContentsOfFile:certsPath encoding:NSUTF8StringEncoding error:&amp;error];</span><br></pre></td></tr></table></figure><h2 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h2><p>iOS的这两种开发语言，Swift和OC，Swift更简洁了，减少了代码的冗余性，最开始接触它的时候，我还以为它是一门弱语言类型的语言，后来发现我错了，下面会娓娓道来，它实际是一门<strong>静态类型的强类型语言</strong>。</p><ol><li>以下情况代码编译会报错：’Cannot assign value of type ‘NSDate’ to type ‘String’’ ，类型错误，由此看出Swift是<em>静态类型语言</em></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var tmp = &quot;asdfas&quot;</span><br><span class="line">let date = NSDate.init()</span><br><span class="line">tmp = date</span><br></pre></td></tr></table></figure><ol start="2"><li>为什么一开始会觉得它是弱类型语言呢？</li></ol><blockquote><p>Swift 变量不强制的指定类型，而是用 var 和 let 表示可变与不可变。所以，误Swift是一门弱类型的语言。</p></blockquote><p>像下面的代码块，变量赋值时并没声明类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let num = 1</span><br><span class="line">let str = &quot;2&quot;</span><br></pre></td></tr></table></figure><p>基于以上，从自身理解，误以为<del>Swift是弱类型语言</del></p><p>但是，实际上，这里没有强制声明类型，看似一个弱类型的语言，其实不然。Swift 编译器能够推断出 num 是 Int 类型。那么 num 就不能再被赋值为 String 类型。更不能写成如下的形式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let num = 1</span><br><span class="line">let str = &quot;2&quot;</span><br><span class="line">let result = num + str</span><br></pre></td></tr></table></figure><p><strong>编译器将会报如下的错误：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">error: binary operator &apos;+&apos; cannot be applied to operands of type &apos;Int&apos; and &apos;String&apos;</span><br><span class="line">let result = num + str</span><br><span class="line">             ~~~ ^ ~~~</span><br><span class="line">note: overloads for &apos;+&apos; exist with these partially matching parameter lists: (Int, Int), (String, String), (Int, UnsafeMutablePointer&lt;Pointee&gt;), (Int, UnsafePointer&lt;Pointee&gt;)</span><br><span class="line">let result = num + str</span><br></pre></td></tr></table></figure><p>这说明了，Swift 是一门<em>强类型语言</em>。Swift 的类型声明，你可以看成是在定义变量的时候，隐式声明的（由编译器推断出），当然也可以显式的声明。如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let num: Int = 1</span><br></pre></td></tr></table></figure><h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p>Web中的常用语言JavaScript，如果有语言基础的话，是一门很快上手的语言，我也很喜欢JavaScript，当然也有使用中比较头疼的事，因为它是一门<strong>动态类型的弱类型语言</strong>，往往项目中在项目运行成功后，控制台意想不到的报错，不像强语言类型那样，直接编译不过，而我又有Swift的编写思想，想着它类型编译通过了，运行肯定就没问题，往往会出现比如编译没问题，类型错误的问题，而且它没有iOS中nil可以调用任何方法的容错机制，如果这个对象为nil再调用其某个方法也会报错，所以写的时候必须要判断是否为空，增加代码冗余性，但是，好处大于弊端，比如代码简洁性，可以动态写很多业务逻辑，我还是很喜欢它。</p><ol><li><em>动态类型语言</em>，以下情况，编译没问题，动态运行时赋值类型</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let tmpFlag = false</span><br><span class="line">let test = &apos;asdfasdfas&apos;</span><br><span class="line">test = tmpFlag // 所以最终test为Bool类型了</span><br></pre></td></tr></table></figure><ol start="2"><li><em>弱类型语言</em>，书写变量时不用声明类型也可</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let tmpFlag = false</span><br><span class="line">let test = &apos;asdfasdfas&apos;</span><br><span class="line">let jjjj = Date.now()</span><br></pre></td></tr></table></figure><h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><p>TypeScript是JavaScript的一个超集，TypeScript可以使用JavaScript中的所有代码和编码概念，TypeScript是为了使 JavaScript的开发变得更加容易而创建的，它是关于尽早捕获错误并使您成为更高效的开发人员，它是什么类型的语言？我们把在JavaScript上实验的代码，放在ts里一试便知道。</p><ol><li>以下情况是js上实验的代码，在ts里编译报错，说明是<em>静态类型语言</em></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let tmpFlag = false</span><br><span class="line">let test = &apos;asdfasdfas&apos;</span><br><span class="line">test = tmpFlag</span><br></pre></td></tr></table></figure><p>报错如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">43:9 Type &apos;false&apos; is not assignable to type &apos;string&apos;.</span><br></pre></td></tr></table></figure><ol start="2"><li>相同代码又在ts里实验，编译未报错，故是<em>弱类型语言</em></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let tmpFlag = false</span><br><span class="line">let test = &apos;asdfasdfas&apos;</span><br><span class="line">let jjjj = Date.now()</span><br></pre></td></tr></table></figure><p>以下代码也未报错：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let num = 1</span><br><span class="line">let str = &apos;2&apos;</span><br><span class="line">let result = num + str</span><br></pre></td></tr></table></figure><p>综上可知，TypeScript是一门<strong>静态类型的弱类型语言</strong>。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;我目前使用过的语言有Object-C、Swift、JavaScript，那它们到底是什么类型的静态语言，以及什么强弱类型语言，很多同学只是简单的背出它们是什么语言及类型，但并没有理解到，现在来举例说明和分享一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://tangyanqiong.com/categories/iOS/"/>
+    
+      <category term="Web" scheme="https://tangyanqiong.com/categories/iOS/Web/"/>
+    
+    
+      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
+    
+      <category term="Object-C" scheme="https://tangyanqiong.com/tags/Object-C/"/>
+    
+      <category term="JavaScript" scheme="https://tangyanqiong.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>跨平台RN与Flutter对比及学习</title>
@@ -290,9 +318,9 @@
       <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
-    
       <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
+    
+      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
     
   </entry>
   
@@ -545,49 +573,6 @@
       <category term="JavaScript" scheme="https://tangyanqiong.com/tags/JavaScript/"/>
     
       <category term="算法" scheme="https://tangyanqiong.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《Vue.js实战》之前端路由与vue-router</title>
-    <link href="https://tangyanqiong.com/post/8734e386.html"/>
-    <id>https://tangyanqiong.com/post/8734e386.html</id>
-    <published>2018-07-04T03:23:17.000Z</published>
-    <updated>2019-07-26T09:44:45.535Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><strong>什么是前端路由</strong></p><blockquote><p>每次 GET 或者 POST 请求在服务端有一个专门的正则配置列表，然后匹配到具体的一条路径后，分发到不同的 Controller，进行各种操作，最终将 html 或数据返回给前端，这就完成了一次 IO。</p></blockquote><p>前端路由的实现有两种：</p><ul><li>URL的hash，即锚点（#），js 通过 hashChange 事件监听 url 的变化</li><li>HTML5 的 History 模式</li></ul><p>优点：</p><ul><li>页面持久性，如音乐网站</li><li>前后端彻底分离，如 Angular 的 ngRouter，React 的 ReactRouter，还有 Vue 的 vue-router</li></ul><p>需要考虑的问题：</p><ul><li>页面的拔插性</li><li>页面的生命周期</li><li>内存管理等</li></ul><a id="more"></a><h4 id="vue-router-基本用法"><a href="#vue-router-基本用法" class="headerlink" title="vue-router 基本用法"></a>vue-router 基本用法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建目录 router</span></span><br><span class="line"><span class="comment"># 安装 vue-router</span></span><br><span class="line">npm i -S vue-router</span><br><span class="line"></span><br><span class="line"><span class="comment"># index.js添加</span></span><br><span class="line">import VueRouter from <span class="string">'vue-router'</span>;</span><br><span class="line">Vue.use(VueRouter);</span><br></pre></td></tr></table></figure><p>在目录 router 新建 views 目录，接着新建 about.vue、 index.vue、 user.vue等</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">const</span> Routers = [</span><br><span class="line">  &#123;</span><br><span class="line">    path: <span class="string">'/index'</span>,</span><br><span class="line">    component: <span class="function">(<span class="params">resolve</span>) =&gt;</span> <span class="built_in">require</span>([<span class="string">'../router/views/index.vue'</span>], resolve)</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    path: <span class="string">'/about'</span>,</span><br><span class="line">    component: <span class="function">(<span class="params">resolve</span>) =&gt;</span> <span class="built_in">require</span>([<span class="string">'../router/views/about.vue'</span>], resolve)</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    path: <span class="string">'*'</span>,</span><br><span class="line">    redirect: <span class="string">'../index'</span>  <span class="comment">// 404指向首页</span></span><br><span class="line">  &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> RouterConfig = &#123;</span><br><span class="line">  <span class="comment">// 使用HTML5的history路由模式</span></span><br><span class="line">  mode: <span class="string">'history'</span>,</span><br><span class="line">  routes: Routers</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(RouterConfig);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(root);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  router: router,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;).$mount(root);</span><br></pre></td></tr></table></figure><p>路由模式通过HTML5的History路由模式，通过 ‘/’设置路径。修改package.json:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "dev": "webpack-dev-server --config webpack.config.js --mode=development --history-api-fallback"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p><p>增加了 <code>--history-api-fallback</code>，所有的路由都指向<code>index.html</code>。</p><p>然后在根实例<code>App.vue</code>中添加<code>&lt;router-view&gt;&lt;/router-view&gt;</code></p><h4 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h4><p>vue-router 有两种跳转页面的方式：</p><ul><li><code>&lt;router-link&gt;</code>组件，会渲染成 <code>&lt;a&gt;</code> 标签，如：<code>&lt;router-link to=&quot;/about&quot;&gt;跳转到 about&lt;/router-link&gt;</code><ul><li>tag : <code>tag=&quot;li&quot;</code> 标签会被渲染成指定的 <code>&lt;li&gt;</code></li><li>replace : 无历史记录</li><li>active-class</li></ul></li><li>使用router实例： <code>$router</code> 方法，如：<code>this.$router.push(&#39;/index&#39;);</code><ul><li>replace : <code>this.$router.replace(&#39;/index&#39;)</code>;</li><li>go : <code>this.$router.go(-1)</code>;<h4 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h4><blockquote><p>问题：如何在SPA项目中，修改网页的标题？</p></blockquote></li></ul></li></ul><p>一般我们是通过<code>window.document.title = &#39;标题&#39;</code>来修改，但是在什么时候修改，这是个问题。</p><p>vue-router 提供了导航钩子 <code>beforeEach()</code> 和 <code>afterEach()</code>，它们会在路由即将改变前和改变后触发。</p><p>这样就解决了页面众多，维护麻烦的问题。（mounted钩子）</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 从路由对象 to 里获取 meta 信息</span></span><br><span class="line">  <span class="built_in">window</span>.document.title = to.meta.title;</span><br><span class="line">  <span class="comment">// 判断页面是否登录</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">window</span>.localStorage.getItem(<span class="string">'token'</span>)) &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next(<span class="string">'/login'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.afterEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 页面跳转回来滚动条默认在顶端</span></span><br><span class="line">  <span class="built_in">window</span>.scroll(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h3 id="状态管理与-Vuex"><a href="#状态管理与-Vuex" class="headerlink" title="状态管理与 Vuex"></a>状态管理与 Vuex</h3><h4 id="状态管理与使用场景"><a href="#状态管理与使用场景" class="headerlink" title="状态管理与使用场景"></a>状态管理与使用场景</h4><p>组件的基本运行模式：一个组件分为数据和视图，数据更新时，视图也跟着更新…视图中又可以绑定一些事件，它们触发methods里指定的方法，从而可以改变数据、更新视图。</p><p>如果需要跨组件共享数据的需求，那就需要借助 Vuex 来管理组件状态。</p><h4 id="Vuex-基本用法"><a href="#Vuex-基本用法" class="headerlink" title="Vuex 基本用法"></a>Vuex 基本用法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -S vuex</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;什么是前端路由&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;每次 GET 或者 POST 请求在服务端有一个专门的正则配置列表，然后匹配到具体的一条路径后，分发到不同的 Controller，进行各种操作，最终将 html 或数据返回给前端，这就完成了一次 IO。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;前端路由的实现有两种：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;URL的hash，即锚点（#），js 通过 hashChange 事件监听 url 的变化&lt;/li&gt;
-&lt;li&gt;HTML5 的 History 模式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;优点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;页面持久性，如音乐网站&lt;/li&gt;
-&lt;li&gt;前后端彻底分离，如 Angular 的 ngRouter，React 的 ReactRouter，还有 Vue 的 vue-router&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;需要考虑的问题：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;页面的拔插性&lt;/li&gt;
-&lt;li&gt;页面的生命周期&lt;/li&gt;
-&lt;li&gt;内存管理等&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="https://tangyanqiong.com/categories/Web/"/>
-    
-      <category term="Vue" scheme="https://tangyanqiong.com/categories/Web/Vue/"/>
-    
-    
-      <category term="Vue-router" scheme="https://tangyanqiong.com/tags/Vue-router/"/>
     
   </entry>
   
