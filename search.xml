@@ -89,9 +89,7 @@
       
       <categories>
           
-          <category> iOS </category>
-          
-          <category> Web </category>
+          <category> Others </category>
           
       </categories>
       
@@ -388,9 +386,9 @@
       
         <tags>
             
-            <tag> Swift </tag>
-            
             <tag> 角标 </tag>
+            
+            <tag> Swift </tag>
             
         </tags>
       
