@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangyanqiong.com/"/>
-  <updated>2020-04-10T07:47:10.918Z</updated>
+  <updated>2020-04-14T07:19:01.855Z</updated>
   <id>https://tangyanqiong.com/</id>
   
   <author>
@@ -17,11 +17,55 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Flutter最新版本环境搭建报错</title>
+    <link href="https://tangyanqiong.com/post/dc7fb27e.html"/>
+    <id>https://tangyanqiong.com/post/dc7fb27e.html</id>
+    <published>2020-04-14T06:24:35.000Z</published>
+    <updated>2020-04-14T07:19:01.855Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近更新到Mac OS最新系统Catalina，重装了Flutter，出现了些问题，在网上也搜索了，可能是才出的新版本问题，也没找到解决办法，最终自己捣鼓解决了此问题，随笔记录下此问题。 </p><a id="more"></a><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>正常搭建Flutter的过程就不说了，到最后一步执行<code>flutter doctor</code>时报错如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">TangYanQiong-MacbookPro:~ TangDan$ flutter doctor</span><br><span class="line">Doctor summary (to see all details, run flutter doctor -v):</span><br><span class="line">[✓] Flutter (Channel master, v1.18.0-5.0.pre.57, on Mac OS X 10.15.4 19E287,</span><br><span class="line">    locale zh-Hans-CN)</span><br><span class="line">[!] Android toolchain - develop for Android devices (Android SDK version 29.0.3)</span><br><span class="line">    ✗ Android license status unknown.</span><br><span class="line">      Try re-installing or updating your Android SDK Manager.</span><br><span class="line">      See https://developer.android.com/studio/#downloads or visit visit</span><br><span class="line">      https://flutter.dev/docs/get-started/install/macos#android-setup for</span><br><span class="line">      detailed instructions.</span><br><span class="line">[✓] Xcode - develop for iOS and macOS (Xcode 11.4)</span><br><span class="line">[✓] Android Studio (version 3.6)</span><br><span class="line"> </span><br><span class="line">[!] Connected device                          </span><br><span class="line">    ! No devices available</span><br><span class="line"></span><br><span class="line">! Doctor found issues in 2 categories.</span><br></pre></td></tr></table></figure><p>网上查了，大多答案都是让执行<code>flutter doctor --android-licenses</code>，结果又报错如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">TangYanQiong-MacbookPro:~ TangDan$ flutter doctor --android-licenses</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Android sdkmanager tool not found</span><br><span class="line">(/Users/TangDan/Library/Android/sdk/tools/bin/sdkmanager).</span><br><span class="line">Try re-installing or updating your Android SDK,</span><br><span class="line">visit https://flutter.dev/docs/get-started/install/macos#android-setup for</span><br><span class="line">detailed instructions.</span><br></pre></td></tr></table></figure><p>这个意思是说，Android sdkmanager tool没找到，然后按照提示的目录信息，去找了一下，发现我的sdk目录下，根本就没有tools这个文件夹，后来调查发现，这个tools文件实际上是android studio安装了Android SDK Tools才会有生成那个文件夹，在这里勾选安装，如果你本地有这个的话，安装了应该就好了。</p><p><img src="https://i.loli.net/2020/04/14/banc4LTCiGfH6uM.png" alt="20190305104220816.png"></p><p>但是我本地并没有这个选项，我这边的Android SDK配置是这样的，根本没有tools这个安装包，只有Command-line Tools这个，有点类似，就也勾选安装了：<br><img src="https://i.loli.net/2020/04/14/VzNalLOkI4bX52F.jpg" alt="921794A9-2AA5-414D-BB73-B2C8E04D6DC6.png"></p><p>安装成功后的目录如下：<br><img src="https://i.loli.net/2020/04/14/AQrYhRKN8gBdO2y.jpg" alt="8C0A4825-8370-4CE2-9421-BEB561E68F24.png"></p><p>还是没有tools这个文件夹，但是sdkmanager有了，后面自己想了下，不是缺tools吗？只是路径不对的问题了，就自己新建了个tools，里面在创建了个bin文件夹，再把sdkmanager拷进去。<br><img src="https://i.loli.net/2020/04/14/RGnK1e3mx4LZIph.jpg" alt="27225CB4-388F-4C7C-8EDD-99A3C0C2C242.png"><br><img src="https://i.loli.net/2020/04/14/JXTMI9Pfw821ySe.jpg" alt="9D0FB5F4-C0DF-44A0-9C8C-421482B40E32.png"></p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>猜想是，Android Studio最新版本Tools版本及名称修改了，但是flutter最新版本并未更新，还是使用老路径导致找不到。</p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>现在再来执行<code>flutter doctor --android-licenses</code>，一路<code>y</code>下去，设置成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">TangYanQiong-MacbookPro:~ TangDan$ flutter doctor --android-licenses</span><br><span class="line">5 of 7 SDK package licenses not accepted. 100% Computing updates...             </span><br><span class="line">Review licenses that have not been accepted (y/N)? y</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p><p>最后，再执行<code>flutter doctor</code>，大功告成，不报错了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">TangYanQiong-MacbookPro:~ TangDan$ flutter doctor</span><br><span class="line">Doctor summary (to see all details, run flutter doctor -v):</span><br><span class="line">[✓] Flutter (Channel master, v1.18.0-5.0.pre.57, on Mac OS X 10.15.4 19E287,</span><br><span class="line">    locale zh-Hans-CN)</span><br><span class="line"> </span><br><span class="line">[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.3)</span><br><span class="line">[✓] Xcode - develop for iOS and macOS (Xcode 11.4)</span><br><span class="line">[✓] Android Studio (version 3.6)</span><br><span class="line"> </span><br><span class="line">[!] Connected device                          </span><br><span class="line">    ! No devices available</span><br><span class="line"></span><br><span class="line">! Doctor found issues in 1 category.</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近更新到Mac OS最新系统Catalina，重装了Flutter，出现了些问题，在网上也搜索了，可能是才出的新版本问题，也没找到解决办法，最终自己捣鼓解决了此问题，随笔记录下此问题。 &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Others" scheme="https://tangyanqiong.com/categories/Others/"/>
+    
+    
+      <category term="Flutter" scheme="https://tangyanqiong.com/tags/Flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter分享</title>
+    <link href="https://tangyanqiong.com/post/ffc8d381.html"/>
+    <id>https://tangyanqiong.com/post/ffc8d381.html</id>
+    <published>2020-04-10T08:18:35.000Z</published>
+    <updated>2020-04-10T08:19:04.011Z</updated>
+    
+    <content type="html"><![CDATA[<p>Flutter环境安装</p><p><a href="https://www.jianshu.com/p/796bb7811797" target="_blank" rel="noopener">https://www.jianshu.com/p/796bb7811797</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Flutter环境安装&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/796bb7811797&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jianshu.com/p/796bb7811797
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Mac OS Catalina 终端Shell报警告</title>
     <link href="https://tangyanqiong.com/post/bdd80ff3.html"/>
     <id>https://tangyanqiong.com/post/bdd80ff3.html</id>
     <published>2020-04-10T07:18:37.000Z</published>
-    <updated>2020-04-10T07:47:10.918Z</updated>
+    <updated>2020-04-14T06:34:25.638Z</updated>
     
     <content type="html"><![CDATA[<h1 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h1><p>前两天更新了Mac OS Catalina系统，总体来说还是可以，虽然有些只支持32位的应用，比如2015版的Office、WireShark等不能用了，但塞翁失马焉知非福呢，卸掉了Office相关的Word、Excel、PPT，瞬间清了几大个G，然后去下载了WPS多方文档格式支持软件，简直不要太好用，而且才几百兆，扯远了。。。</p><p>今天随笔记一个小事件，对于强迫症人士有用，比如我。</p><p>终端Shell报警告：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The default interactive shell is now zsh.</span><br><span class="line">To update your account to use zsh, please run `chsh -s /bin/zsh`.</span><br><span class="line">For more details, please visit https://support.apple.com/kb/HT208050.</span><br><span class="line">TangYanQiongdeMacBook-Pro:~ TangDan$</span><br></pre></td></tr></table></figure><a id="more"></a><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>从报的警告就可以看出，提示原来使用的是bash风格，然而Catalina系统的shell已更改为zsh，请用 <code>chsh -s /bin/zsh</code> 更新替换，好吧，就run了，结果变成了这个风格</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TangDan@TangYanQiongdeMacBook-Pro ~ %</span><br></pre></td></tr></table></figure><p>对这种爱不起来，然后查看系统支持的shell风格列表：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">TangYanQiongdeMacBook-Pro:~ TangDan$ cat /etc/shells</span><br><span class="line"># List of acceptable shells for chpass(1).</span><br><span class="line"># Ftpd will not allow users to connect who are not using</span><br><span class="line"># one of these shells.</span><br><span class="line"></span><br><span class="line">/bin/bash</span><br><span class="line">/bin/csh</span><br><span class="line">/bin/dash</span><br><span class="line">/bin/ksh</span><br><span class="line">/bin/sh</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure><p>然后每个都试了，还是<code>/bin/bash</code>这种风格<code>TangYanQiongdeMacBook-Pro:~ TangDan$</code>最喜欢，但是系统会报警告，好，那把这个警告怎么消除？</p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><ol><li>vim修改bash_profile文件，在终端输出</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br></pre></td></tr></table></figure><ol start="2"><li>在bash_profile文件最下方加上，按<code>i</code>进入编辑模式</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># macOS Catalina</span><br><span class="line">export BASH_SILENCE_DEPRECATION_WARNING=1</span><br></pre></td></tr></table></figure><ol start="3"><li>按<code>esc</code>退出编辑模式，再输入<code>:wq</code>保存退出，现在终端就不会报警告了。</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Last login: Fri Apr 10 15:40:06 on ttys006</span><br><span class="line">TangYanQiongdeMacBook-Pro:~ TangDan$</span><br></pre></td></tr></table></figure><h1 id="题外"><a href="#题外" class="headerlink" title="题外"></a>题外</h1><p>看到我这边shell用户名<code>TangYanQiongdeMacBook-Pro</code>我想改它很久（中英混合。。。），这会顺便改了，打开系统偏好设置-共享-直接修改电脑名称就可以修改了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Last login: Fri Apr 10 15:46:05 on ttys006</span><br><span class="line">TangYanQiong-MacbookPro:~ TangDan$</span><br></pre></td></tr></table></figure><p>舒服了，😃</p>]]></content>
     
@@ -34,7 +78,7 @@
     
     </summary>
     
-      <category term="随笔记" scheme="https://tangyanqiong.com/categories/%E9%9A%8F%E7%AC%94%E8%AE%B0/"/>
+      <category term="Others" scheme="https://tangyanqiong.com/categories/Others/"/>
     
     
       <category term="Shell" scheme="https://tangyanqiong.com/tags/Shell/"/>
@@ -77,9 +121,9 @@
     
       <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
     
-      <category term="Object-C" scheme="https://tangyanqiong.com/tags/Object-C/"/>
-    
       <category term="JavaScript" scheme="https://tangyanqiong.com/tags/JavaScript/"/>
+    
+      <category term="Object-C" scheme="https://tangyanqiong.com/tags/Object-C/"/>
     
       <category term="TypeScript" scheme="https://tangyanqiong.com/tags/TypeScript/"/>
     
@@ -103,9 +147,9 @@
       <category term="跨平台" scheme="https://tangyanqiong.com/categories/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"/>
     
     
-      <category term="RN" scheme="https://tangyanqiong.com/tags/RN/"/>
-    
       <category term="Flutter" scheme="https://tangyanqiong.com/tags/Flutter/"/>
+    
+      <category term="RN" scheme="https://tangyanqiong.com/tags/RN/"/>
     
   </entry>
   
@@ -359,9 +403,9 @@
       <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
-    
       <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
+    
+      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
     
   </entry>
   
@@ -507,60 +551,6 @@
       <category term="JavaScript" scheme="https://tangyanqiong.com/tags/JavaScript/"/>
     
       <category term="单例模式" scheme="https://tangyanqiong.com/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>页面滑动时的动画插件WOW.js</title>
-    <link href="https://tangyanqiong.com/post/9ac2330d.html"/>
-    <id>https://tangyanqiong.com/post/9ac2330d.html</id>
-    <published>2018-09-04T03:16:42.000Z</published>
-    <updated>2019-07-26T09:53:02.100Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>当初次加载页面的时候，需要一些动画渐入，并且当滑动到当前内容时也会出现动画，之后就恢复正常，所以就用到了 <code>WOW.js</code>。</p></blockquote><p>比如：<a href="https://www.rt-thread.org/" target="_blank" rel="noopener">RT-Thread</a></p><p>再比如设计师必备：<a href="https://www.sketchapp.com/" target="_blank" rel="noopener">sketchapp</a></p><a id="more"></a><h3 id="WOW-js"><a href="#WOW-js" class="headerlink" title="WOW.js"></a>WOW.js</h3><p>文档：<a href="https://www.delac.io/wow/index.html" target="_blank" rel="noopener">WOW</a></p><h3 id="Animate-css"><a href="#Animate-css" class="headerlink" title="Animate.css"></a>Animate.css</h3><p>模拟：<a href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener">Animate</a></p><p><code>animate.css</code> 包含了一组炫酷、有趣、跨浏览器的动画，可以在你的项目中直接使用。</p><h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/wow/1.1.2/wow.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>文档：<a href="https://www.delac.io/wow/docs.html" target="_blank" rel="noopener">Setup WOW.js</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```html</span><br><span class="line">&lt;div class=&quot;wow bounceInUp&quot;  data-wow-duration=&quot;2s&quot; data-wow-delay=&quot;5s&quot;&gt;</span><br><span class="line">    Content to Reveal Here</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    new WOW().init();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>ps：初始加载页面的时候，很有可能会出现内容再动画渲染，所以直接设置：<br><code>`</code>css<br>.wow {<br>    visibility: hidden;<br>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;当初次加载页面的时候，需要一些动画渐入，并且当滑动到当前内容时也会出现动画，之后就恢复正常，所以就用到了 &lt;code&gt;WOW.js&lt;/code&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;比如：&lt;a href=&quot;https://www.rt-thread.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;RT-Thread&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;再比如设计师必备：&lt;a href=&quot;https://www.sketchapp.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;sketchapp&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="https://tangyanqiong.com/categories/Web/"/>
-    
-      <category term="CSS" scheme="https://tangyanqiong.com/categories/Web/CSS/"/>
-    
-    
-      <category term="CSS" scheme="https://tangyanqiong.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OC工程怎么转换为Swift工程</title>
-    <link href="https://tangyanqiong.com/post/dff23fd2.html"/>
-    <id>https://tangyanqiong.com/post/dff23fd2.html</id>
-    <published>2018-08-24T09:42:27.000Z</published>
-    <updated>2019-05-27T06:32:07.471Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前段时间用Object-C正在开发一个项目，开发了差不多百分之七八十了，客户通知要求改成Swift语言开发（因为他只会Swift），好吧，一个项目用Swift来写其实也无可厚非，但是这个项目中途来换，可想而知是多么痛苦的事，已经写了好多个OC类。</p><a id="more"></a><h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="调研"><a href="#调研" class="headerlink" title="调研"></a>调研</h2><p>之前一开始也在网上找了很多资料，有OC与Swift对应功能的语法解说，也有贴代码用工具直接转的，用过iSwift，但不是很好用，识别率不高，正确率不高。</p><p>这些都感觉比较费时（客户只给了一周的时间），然后就在想，有没有一个是直接可以转工程的工具呢？别说，强大的google还真搜出来了，这个软件可以直接转换工程。</p><h2 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h2><p>这个软件叫什么名呢，也不卖关子了，是一个在线转换的网站：</p><p><a href="https://objectivec2swift.com/#/converter/code/" target="_blank" rel="noopener">OC2Swift</a></p><p>它是提供少量代码免费转换，大家可转换自己的部分代码看看正确性，还可以在线输出Swift代码结果，它可以单文件、文件夹或工程打包在线转换。</p><p>不过呢，好的软件都是收费的，具体资费我就不说了（避免托的嫌疑，有需要的上官网自己看吧），对于转换的成本来说这个价格很便宜了。</p><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><ul><li><ol><li>给大家一个建议，这个购买后使用有流量限制，建议打包的时候把静态库、framwork、SDK、第三方库等相关的剔除后打包上传，转换成功后再放置到对应路径下。</li></ol></li><li><ol start="2"><li>原OC代码留存（原因见下面）。</li></ol></li></ul><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p><strong>这个工程转换成功后，使用起来就没有一点问题了吗？</strong></p><p>错错错，当初我记得一开始报错不怎么多几十个吧，关键改完后，不断的重编译就暴露更多的错，这样下来估计也改了有几百个错了。</p><h4 id="是什么类型的错误"><a href="#是什么类型的错误" class="headerlink" title="是什么类型的错误"></a>是什么类型的错误</h4><ul><li><ol><li>很多都是语法的错误，而Xcode有提示修正的方法，直接鼠标点点点就改好了，比较轻松。</li></ol></li><li><ol start="2"><li>有些是语法不识别的问题，这个就需要自己查资料对应OC代码寻找对应的Swift代码了，所以要留存原OC代码。</li></ol></li><li><ol start="3"><li>有些工程设置的地方报错，但是这个很少，就几处，百度google就能解决。</li></ol></li></ul><h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>然后，到了这一步，以为万事大吉了吗？哈哈，并没有，有些地方转换虽说没报错，但可能会转错意，需要整体流程跑下，最好找测试再过遍流程，切记。</p><p>PS：有些OC库实在没办法转的，就采取<strong>桥接</strong>的方式使用吧。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总体来说，这次的转换是很成功的，原本估时为一周，但是实际2～3天就完成了转换，比较高效率，所以建议大家转换Swift可采取这种方式。</p><p>比较遗憾的是，当时时间比较赶，没来得及截图留存给大家，如果觉得文章上有什么疑问，或者实际实践过程中遇到什么问题，欢迎大家在下方留言告诉我，我会第一时间回复你。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;前段时间用Object-C正在开发一个项目，开发了差不多百分之七八十了，客户通知要求改成Swift语言开发（因为他只会Swift），好吧，一个项目用Swift来写其实也无可厚非，但是这个项目中途来换，可想而知是多么痛苦的事，已经写了好多个OC类。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://tangyanqiong.com/categories/iOS/"/>
-    
-      <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
-    
-    
-      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
-    
-      <category term="Object-C" scheme="https://tangyanqiong.com/tags/Object-C/"/>
     
   </entry>
   
