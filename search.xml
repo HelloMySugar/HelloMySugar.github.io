@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>纯JS代码实现下载文件重命名</title>
+      <title>纯JS代码实现多文件下载及重命名</title>
       <link href="/post/65070cbe.html"/>
       <url>/post/65070cbe.html</url>
       
@@ -467,9 +467,9 @@
       
         <tags>
             
-            <tag> 角标 </tag>
-            
             <tag> Swift </tag>
+            
+            <tag> 角标 </tag>
             
         </tags>
       
