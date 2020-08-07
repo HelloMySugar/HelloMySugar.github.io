@@ -67,6 +67,20 @@
         <content type="html"><![CDATA[<h1 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h1><p>ListView其实是一个很好用的组件，一般来说使用的时候只需要固定宽度，高度会自适应，但是这次遇到个问题，我使用ListView后，报错页面越界</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I/flutter ( 8777): The following RenderObject was being processed when the exception was fired: RenderViewport#01b4b NEEDS-LAYOUT NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE:</span><br></pre></td></tr></table></figure><p>最后才发现，是将ListView布在Colum就会出现这个问题，原来在Colum里ListView必须设置Height才不报错，网上还有种解决办法是在ListView外在包层Expand组件，但我试了不生效，最终采用设置ListView的高度才生效，ListView高度也可以动态设置：arr.length*cellHeight，同样也可以达到自适应高度的效果。</p>]]></content>
       
       
+      <categories>
+          
+          <category> Flutter </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Flutter </tag>
+            
+            <tag> Dart </tag>
+            
+        </tags>
       
     </entry>
     
@@ -91,9 +105,9 @@
             
             <tag> Charles </tag>
             
-            <tag> 抓包 </tag>
-            
             <tag> WeChat </tag>
+            
+            <tag> 抓包 </tag>
             
         </tags>
       
