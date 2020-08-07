@@ -43,16 +43,28 @@
   </entry>
   
   <entry>
-    <title>charles抓包Flutter</title>
+    <title>Charles抓包Flutter程序</title>
     <link href="https://tangyanqiong.com/post/da63a4a7.html"/>
     <id>https://tangyanqiong.com/post/da63a4a7.html</id>
-    <published>2020-08-05T07:11:08.000Z</published>
-    <updated>2020-08-07T07:50:05.198Z</updated>
+    <published>2020-08-01T07:11:08.000Z</published>
+    <updated>2020-08-07T08:47:03.271Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在使用Flutter开发的过程中，会发现Flutter打印到控制台的log有限制，日志打印不全的情况如下输出。那怎么解决呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I/flutter (25292): 003XxGq831zlQv&quot;&#125;,&quot;pic_info&quot;:&#123;&quot;urlex2&quot;:&quot;&quot;,&quot;mid&quot;:&quot;&quot;,&quot;url&quot;:&quot;http://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1788739.jpg&quot;,&quot;urlex1&quot;:&quot;&quot;&#125;&#125;,&#123;&quot;cover&quot;:&quot;&quot;,&quot;sub_title&quot;:&quot;&quot;,&quot;listen_num&quot;:0,&quot;report&quot;:&quot;&quot;,&quot;id&quot;:23554,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:3002,&quot;jump_info&quot;:&#123;&quot;mid&quot;:</span><br></pre></td></tr></table></figure></p><a id="more"></a><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>出现这种问题有两种解决方案：</p><ol><li>使用<strong>LogUtil</strong>第三方SDK来管理日志，这个就需要改代码，这种解决方案网上也很多，比如<a href="https://blog.csdn.net/zylvip/article/details/102608256" target="_blank" rel="noopener">解决Flutter日志过长</a>。</li><li>第二种呢，我其实当时也只是因为想看返回的接口参数，也不想改代码，就想着使用抓包工具Charls抓包就完事了。</li></ol><p>实际呢，没那么简单，还得在Flutter里设置代理转发，才能被抓包到，具体代码如下：（这里使用的请求框架是Dio）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Dio dio = Dio();</span><br><span class="line">dio.options.contentType = ContentType.parse(&apos;application/x-www-form-urlencoded&apos;).toString();</span><br><span class="line"></span><br><span class="line">    // 为了Charles抓包使用</span><br><span class="line">    (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =</span><br><span class="line">      (client) &#123;</span><br><span class="line">      client.badCertificateCallback =</span><br><span class="line">        (X509Certificate cert, String host, int port) &#123;</span><br><span class="line">        return Platform.isAndroid;</span><br><span class="line">      &#125;;</span><br><span class="line">      client.findProxy = (url) &#123;</span><br><span class="line">        return &apos;PROXY 192.168.125.130:8888&apos;;// 本机IP</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">    //</span><br></pre></td></tr></table></figure><p>这样设置后，就能抓到包了。</p>]]></content>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在使用Flutter开发的过程中，会发现Flutter打印到控制台的log有限制，日志打印不全的情况如下输出。那怎么解决呢？&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;I/flutter (25292): 003XxGq831zlQv&amp;quot;&amp;#125;,&amp;quot;pic_info&amp;quot;:&amp;#123;&amp;quot;urlex2&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;mid&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;url&amp;quot;:&amp;quot;http://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1788739.jpg&amp;quot;,&amp;quot;urlex1&amp;quot;:&amp;quot;&amp;quot;&amp;#125;&amp;#125;,&amp;#123;&amp;quot;cover&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;sub_title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;listen_num&amp;quot;:0,&amp;quot;report&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;id&amp;quot;:23554,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;type&amp;quot;:3002,&amp;quot;jump_info&amp;quot;:&amp;#123;&amp;quot;mid&amp;quot;:&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
     </summary>
     
+      <category term="Others" scheme="https://tangyanqiong.com/categories/Others/"/>
+    
+    
+      <category term="Flutter" scheme="https://tangyanqiong.com/tags/Flutter/"/>
+    
+      <category term="Charles" scheme="https://tangyanqiong.com/tags/Charles/"/>
+    
+      <category term="抓包" scheme="https://tangyanqiong.com/tags/%E6%8A%93%E5%8C%85/"/>
     
   </entry>
   
@@ -220,9 +232,9 @@
       <category term="Others" scheme="https://tangyanqiong.com/categories/Others/"/>
     
     
-      <category term="JavaScript" scheme="https://tangyanqiong.com/tags/JavaScript/"/>
-    
       <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
+    
+      <category term="JavaScript" scheme="https://tangyanqiong.com/tags/JavaScript/"/>
     
       <category term="Object-C" scheme="https://tangyanqiong.com/tags/Object-C/"/>
     
@@ -504,9 +516,9 @@
       <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
-    
       <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
+    
+      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
     
   </entry>
   
