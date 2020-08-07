@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangyanqiong.com/"/>
-  <updated>2020-08-07T07:58:52.846Z</updated>
+  <updated>2020-08-07T08:16:35.691Z</updated>
   <id>https://tangyanqiong.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://tangyanqiong.com/post/3ad2b151.html"/>
     <id>https://tangyanqiong.com/post/3ad2b151.html</id>
     <published>2020-08-07T07:57:35.000Z</published>
-    <updated>2020-08-07T07:58:52.846Z</updated>
+    <updated>2020-08-07T08:16:35.691Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h1><p>Flutter环境安装网上教程一大堆，我是按照下面的安装的：<br><a href="https://www.jianshu.com/p/796bb7811797" target="_blank" rel="noopener">Flutter安装教程</a></p><h1 id="学习过程"><a href="#学习过程" class="headerlink" title="学习过程"></a>学习过程</h1><p>一开始也是比较彷徨，疯狂搜索教程，这里说下找对合适的自己的教程真的很重要，也因人而异吧，我并没有去看官网文档，一方面是觉得英文文档看得头疼，一方面觉得实际工作中用到的官网上并不会详说，当然想要学得更透彻更了解原理，可能看官方文档更直接。</p><p>最后我找到了<strong>技术胖</strong>这个前端大神写的教程，讲解通俗易懂，他的<a href="https://jspang.com/" target="_blank" rel="noopener">技术胖博客</a>  里面还有很多干货，以后学其他知识也可以在这个里面找。</p><a id="more"></a><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>首先是按照他<a href="https://jspang.com/detailed?id=58" target="_blank" rel="noopener">Flutter学习路线-按次路线学习顺畅无比</a>讲Flutter基础组件及基本使用学了，其实我学这个Dart语言上手还是很快，可能有iOS和Web开发基础，我觉得Dart还挺好用，但我的前端同事看到Dart的语法，所有组件代码叠到一起，顿时就不好受了，😃，我觉得还好，因为以前iOS纯代码布局可没少整。</p><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>基础的学完后，肯定就想要进阶实战，于是，有去实撸项目，找了款电商小程序，用Charls抓小程序接口，就有之前分享的Charls抓小程序接口文章，同时结合大神学习方法，撸出仿“百姓生活+”APP，如下图：</p><h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p><img src="https://i.loli.net/2020/08/07/9DOMo3uVeBZ4GPv.png" alt="Screenshot_1596766984.png"></p><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p><img src="https://i.loli.net/2020/08/07/MlPQLVHsXTCj8d3.png" alt="Screenshot_1596766994.png"> </p><h3 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h3><p><img src="https://i.loli.net/2020/08/07/lOTNt4CcXM8o7nk.png" alt="Screenshot_1596766999.png"></p><h3 id="会员中心"><a href="#会员中心" class="headerlink" title="会员中心"></a>会员中心</h3><p><img src="https://i.loli.net/2020/08/07/eS27PsoTQ31mtuj.png" alt="Screenshot_1596767002.png"></p><p>项目已放到github上：<a href="https://github.com/HelloMySugar/mobileMarket" target="_blank" rel="noopener">Flutter电商实战</a></p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总体来说，Flutter框架及Dart语言带给我的还是很惊艳的，特别是一端代码用到两端上，这个成就感比单做iOS或者单做Web大。接下来，会再继续深入学习Flutter，之前听同事说去玩了Flutter Web，很震撼，直接使用dart2js渲染，生成HTML，但是我查了下，毕竟出来不久，很多功能还未实现且还有很多bug，性能也不咋好，等过段时间坑填差不多了，再去深究下。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>首先呢是Flutter环境安装，网上教程一大堆，我是按照下面的安装的：<a href="https://www.jianshu.com/p/796bb7811797" target="_blank" rel="noopener">安装教程</a>，其实环境安好了一阵子，也学了一段时间，但中间有项目比较着急，晚上也在加班，就暂停了Flutter的学习，好在最近一段时间给补上了，最终也做出了成品，还是比较满意的。</p><h1 id="学习过程"><a href="#学习过程" class="headerlink" title="学习过程"></a>学习过程</h1><p>一开始也是比较彷徨，疯狂搜索教程，这里说下找对合适的自己的教程真的很重要，也因人而异吧，我并没有去看官网文档，一方面是觉得英文文档看得头疼，一方面觉得实际工作中用到的官网上并不会详说，当然想要学得更透彻更了解原理，可能看官方文档更直接。</p><p>最后我找到了<strong>技术胖</strong>这个前端大神写的教程，讲解通俗易懂，他的<a href="https://jspang.com/" target="_blank" rel="noopener">技术胖博客</a>  里面还有很多干货，以后学其他知识也可以在这个里面找。</p><a id="more"></a><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>首先是按照他<a href="https://jspang.com/detailed?id=58" target="_blank" rel="noopener">Flutter学习路线-按次路线学习顺畅无比</a>讲Flutter基础组件及基本使用学了，其实我学这个Dart语言上手还是很快，可能有iOS和Web开发基础，我觉得Dart还挺好用，但我的前端同事看到Dart的语法，所有组件代码叠到一起，顿时就不好受了，😃，我觉得还好，因为以前iOS纯代码布局可没少整。</p><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>基础的学完后，肯定就想要进阶实战，于是，有去实撸项目，找了款电商小程序，用Charls抓小程序接口，就有之前分享的<strong>Charls抓小程序接口</strong>文章，同时结合大神学习方法，撸出仿“百姓生活+”APP，如下图：</p><h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p><img src="https://i.loli.net/2020/08/07/9DOMo3uVeBZ4GPv.png" alt="Screenshot_1596766984.png"></p><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p><img src="https://i.loli.net/2020/08/07/MlPQLVHsXTCj8d3.png" alt="Screenshot_1596766994.png"> </p><h3 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h3><p><img src="https://i.loli.net/2020/08/07/lOTNt4CcXM8o7nk.png" alt="Screenshot_1596766999.png"></p><h3 id="会员中心"><a href="#会员中心" class="headerlink" title="会员中心"></a>会员中心</h3><p><img src="https://i.loli.net/2020/08/07/eS27PsoTQ31mtuj.png" alt="Screenshot_1596767002.png"></p><h3 id="项目已放到github上：Flutter电商实战"><a href="#项目已放到github上：Flutter电商实战" class="headerlink" title="项目已放到github上：Flutter电商实战"></a><strong>项目已放到github上：</strong><a href="https://github.com/HelloMySugar/mobileMarket" target="_blank" rel="noopener">Flutter电商实战</a></h3><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总体来说，Flutter框架及Dart语言带给我的还是很惊艳，特别是一端代码用到两端上，这个成就感比单做iOS或者单做Web大。接下来，会再继续深入学习Flutter，之前听同事说去玩了Flutter Web，很震撼，直接使用dart2js渲染，生成HTML，但是我查了下，毕竟出来不久，很多功能还未实现且还有很多bug，性能也不咋好，等过段时间坑填差不多了，再去深究下。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;环境安装&quot;&gt;&lt;a href=&quot;#环境安装&quot; class=&quot;headerlink&quot; title=&quot;环境安装&quot;&gt;&lt;/a&gt;环境安装&lt;/h1&gt;&lt;p&gt;Flutter环境安装网上教程一大堆，我是按照下面的安装的：&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/p/796bb7811797&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Flutter安装教程&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;首先呢是Flutter环境安装，网上教程一大堆，我是按照下面的安装的：&lt;a href=&quot;https://www.jianshu.com/p/796bb7811797&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;安装教程&lt;/a&gt;，其实环境安好了一阵子，也学了一段时间，但中间有项目比较着急，晚上也在加班，就暂停了Flutter的学习，好在最近一段时间给补上了，最终也做出了成品，还是比较满意的。&lt;/p&gt;
 &lt;h1 id=&quot;学习过程&quot;&gt;&lt;a href=&quot;#学习过程&quot; class=&quot;headerlink&quot; title=&quot;学习过程&quot;&gt;&lt;/a&gt;学习过程&lt;/h1&gt;&lt;p&gt;一开始也是比较彷徨，疯狂搜索教程，这里说下找对合适的自己的教程真的很重要，也因人而异吧，我并没有去看官网文档，一方面是觉得英文文档看得头疼，一方面觉得实际工作中用到的官网上并不会详说，当然想要学得更透彻更了解原理，可能看官方文档更直接。&lt;/p&gt;
 &lt;p&gt;最后我找到了&lt;strong&gt;技术胖&lt;/strong&gt;这个前端大神写的教程，讲解通俗易懂，他的&lt;a href=&quot;https://jspang.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;技术胖博客&lt;/a&gt;  里面还有很多干货，以后学其他知识也可以在这个里面找。&lt;/p&gt;
     
@@ -504,9 +504,9 @@
       <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
-    
       <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
+    
+      <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
     
   </entry>
   
