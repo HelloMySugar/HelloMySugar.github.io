@@ -105,9 +105,9 @@
             
             <tag> Charles </tag>
             
-            <tag> WeChat </tag>
-            
             <tag> 抓包 </tag>
+            
+            <tag> WeChat </tag>
             
         </tags>
       
@@ -124,6 +124,8 @@
       
       
       <categories>
+          
+          <category> Web </category>
           
           <category> JS </category>
           
@@ -255,9 +257,9 @@
       
         <tags>
             
-            <tag> Swift </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> Swift </tag>
             
             <tag> Object-C </tag>
             
@@ -545,9 +547,9 @@
       
         <tags>
             
-            <tag> Swift </tag>
-            
             <tag> 角标 </tag>
+            
+            <tag> Swift </tag>
             
         </tags>
       
