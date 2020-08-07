@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>charles抓包Flutter</title>
+      <link href="/post/da63a4a7.html"/>
+      <url>/post/da63a4a7.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Web实现多文件下载及重命名</title>
       <link href="/post/65070cbe.html"/>
       <url>/post/65070cbe.html</url>
@@ -58,19 +71,6 @@
     
     
     <entry>
-      <title>Flutter分享</title>
-      <link href="/post/ffc8d381.html"/>
-      <url>/post/ffc8d381.html</url>
-      
-        <content type="html"><![CDATA[<p>Flutter环境安装</p><p><a href="https://www.jianshu.com/p/796bb7811797" target="_blank" rel="noopener">https://www.jianshu.com/p/796bb7811797</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Mac OS Catalina 终端Shell报警告</title>
       <link href="/post/bdd80ff3.html"/>
       <url>/post/bdd80ff3.html</url>
@@ -100,8 +100,14 @@
       <link href="/post/98fdf95d.html"/>
       <url>/post/98fdf95d.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="叨叨说"><a href="#叨叨说" class="headerlink" title="叨叨说"></a>叨叨说</h1><p>本想学习RN的，环境都搭建好了，但是后面被Flutter吸引了，Flutter性能优于RN，加上Dart语言对于我来说（iOS开发经验+Web开发经验）很容易上手，之前有大概看了下RN的编码方式，觉得不喜欢，故暂弃，等有比较多空闲时间时再来研究。</p>]]></content>
       
+      
+      <categories>
+          
+          <category> Others </category>
+          
+      </categories>
       
       
     </entry>
@@ -225,7 +231,7 @@
       <link href="/post/d18ae5e4.html"/>
       <url>/post/d18ae5e4.html</url>
       
-        <content type="html"><![CDATA[<h1 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h1><p>由于前段时间工作忙，快一个月没更新博客了，貌似有些忘了MarkDown的语法，这里记录下MarkDown语法作备忘录，以后方便查找。</p><a id="more"></a><h1 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h1><h3 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#一级标题</span><br><span class="line"></span><br><span class="line">##二级标题</span><br><span class="line"></span><br><span class="line">###三级标题</span><br><span class="line"></span><br><span class="line">####四级标题</span><br><span class="line"></span><br><span class="line">#####五级标题</span><br><span class="line"></span><br><span class="line">######六级标题</span><br></pre></td></tr></table></figure><h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><hr><h3 id="使用-加空格，来表示无序列表"><a href="#使用-加空格，来表示无序列表" class="headerlink" title="使用*加空格，来表示无序列表"></a>使用*加空格，来表示无序列表</h3><ul><li><p>1</p></li><li><p>2</p></li><li><p>3</p></li></ul><h3 id="用数字加-加空格，来表示有序列表"><a href="#用数字加-加空格，来表示有序列表" class="headerlink" title="用数字加.加空格，来表示有序列表"></a>用数字加.加空格，来表示有序列表</h3><ol><li><p>1</p></li><li><p>2</p></li><li><p>3</p></li><li><p>4</p></li></ol><h3 id="使用引用"><a href="#使用引用" class="headerlink" title="使用引用"></a>使用引用</h3><blockquote><p>引用需要使用&gt;和空格</p></blockquote><h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p><a href="http://baidu.com" target="_blank" rel="noopener">baidu</a></p><h3 id="插入在线图片"><a href="#插入在线图片" class="headerlink" title="插入在线图片"></a>插入在线图片</h3><p><img src="https://www.baidu.com/img/bd_logo1.png" alt="icon"></p><h3 id="使用粗体、斜体"><a href="#使用粗体、斜体" class="headerlink" title="使用粗体、斜体"></a>使用粗体、斜体</h3><p><strong>这就是粗体</strong></p><p><em>这就是斜体</em></p><p><strong><em>这就是斜粗体</em></strong></p><h3 id="Task-list"><a href="#Task-list" class="headerlink" title="Task list"></a>Task list</h3><ul><li style="list-style: none"><input type="checkbox" checked> finished</li><li style="list-style: none"><input type="checkbox"> unfinished</li></ul><p><del>这个是删除线</del></p><h3 id="使用代码框，PS-这种不支持代码的语法高亮"><a href="#使用代码框，PS-这种不支持代码的语法高亮" class="headerlink" title="使用代码框，PS:这种不支持代码的语法高亮"></a>使用代码框，PS:这种不支持代码的语法高亮</h3><p>~~~<br>@IBAction func showMessage(){</p><p>let alertController = UIAlertController(title: “welcome to my first app”, message: “hello world”, preferredStyle: UIAlertControllerStyle.Alert)</p><p>alertController.addAction(UIAlertAction(title: “OK”, style: UIAlertActionStyle.Default, handler: nil))</p><p>self.presentViewController(alertController, animated: true, completion: nil)</p><p>}<br><code>`</code></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h1><p>由于前段时间工作忙，快一个月没更新博客了，貌似有些忘了MarkDown的语法，这里记录下MarkDown语法作备忘录，以后方便查找。</p><a id="more"></a><h1 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h1><h3 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#一级标题</span><br><span class="line"></span><br><span class="line">##二级标题</span><br><span class="line"></span><br><span class="line">###三级标题</span><br><span class="line"></span><br><span class="line">####四级标题</span><br><span class="line"></span><br><span class="line">#####五级标题</span><br><span class="line"></span><br><span class="line">######六级标题</span><br></pre></td></tr></table></figure><h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><hr><h3 id="使用-加空格，来表示无序列表"><a href="#使用-加空格，来表示无序列表" class="headerlink" title="使用*加空格，来表示无序列表"></a>使用*加空格，来表示无序列表</h3><ul><li><p>1</p></li><li><p>2</p></li><li><p>3</p></li></ul><h3 id="用数字加-加空格，来表示有序列表"><a href="#用数字加-加空格，来表示有序列表" class="headerlink" title="用数字加.加空格，来表示有序列表"></a>用数字加.加空格，来表示有序列表</h3><ol><li><p>1</p></li><li><p>2</p></li><li><p>3</p></li><li><p>4</p></li></ol><h3 id="使用引用"><a href="#使用引用" class="headerlink" title="使用引用"></a>使用引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 引用需要使用&gt;和空格</span><br></pre></td></tr></table></figure><blockquote><p>引用需要使用&gt;和空格</p></blockquote><h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[baidu](http://baidu.com)</span><br></pre></td></tr></table></figure><p><a href="http://baidu.com" target="_blank" rel="noopener">baidu</a></p><h3 id="插入在线图片"><a href="#插入在线图片" class="headerlink" title="插入在线图片"></a>插入在线图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![icon](https://www.baidu.com/img/bd_logo1.png)</span><br></pre></td></tr></table></figure><p><img src="https://www.baidu.com/img/bd_logo1.png" alt="icon"></p><h3 id="使用粗体、斜体"><a href="#使用粗体、斜体" class="headerlink" title="使用粗体、斜体"></a>使用粗体、斜体</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**这就是粗体**</span><br></pre></td></tr></table></figure><p><strong>这就是粗体</strong></p><p><em>这就是斜体</em></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*这就是斜体*</span><br></pre></td></tr></table></figure><p><strong><em>这就是斜粗体</em></strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">***这就是斜粗体***</span><br></pre></td></tr></table></figure><h3 id="Task-list"><a href="#Task-list" class="headerlink" title="Task list"></a>Task list</h3><ul><li style="list-style: none"><input type="checkbox" checked> finished</li><li style="list-style: none"><input type="checkbox"> unfinished</li></ul><p><del>这个是删除线</del></p><h3 id="使用代码框，PS-这种不支持代码的语法高亮"><a href="#使用代码框，PS-这种不支持代码的语法高亮" class="headerlink" title="使用代码框，PS:这种不支持代码的语法高亮"></a>使用代码框，PS:这种不支持代码的语法高亮</h3><p>~~~<br>@IBAction func showMessage(){</p><p>let alertController = UIAlertController(title: “welcome to my first app”, message: “hello world”, preferredStyle: UIAlertControllerStyle.Alert)</p><p>alertController.addAction(UIAlertAction(title: “OK”, style: UIAlertActionStyle.Default, handler: nil))</p><p>self.presentViewController(alertController, animated: true, completion: nil)</p><p>}<br><code>`</code></p>]]></content>
       
       
       <categories>
@@ -469,9 +475,9 @@
       
         <tags>
             
-            <tag> 角标 </tag>
-            
             <tag> Swift </tag>
+            
+            <tag> 角标 </tag>
             
         </tags>
       
