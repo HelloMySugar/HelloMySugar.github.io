@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangyanqiong.com/"/>
-  <updated>2020-08-07T07:11:08.524Z</updated>
+  <updated>2020-08-07T07:50:05.198Z</updated>
   <id>https://tangyanqiong.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>charles抓包Flutter</title>
     <link href="https://tangyanqiong.com/post/da63a4a7.html"/>
     <id>https://tangyanqiong.com/post/da63a4a7.html</id>
-    <published>2020-08-07T07:11:08.000Z</published>
-    <updated>2020-08-07T07:11:08.524Z</updated>
+    <published>2020-08-05T07:11:08.000Z</published>
+    <updated>2020-08-07T07:50:05.198Z</updated>
     
     <summary type="html">
     
@@ -478,9 +478,9 @@
       <category term="Swift" scheme="https://tangyanqiong.com/categories/iOS/Swift/"/>
     
     
-      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
-    
       <category term="角标" scheme="https://tangyanqiong.com/tags/%E8%A7%92%E6%A0%87/"/>
+    
+      <category term="Swift" scheme="https://tangyanqiong.com/tags/Swift/"/>
     
   </entry>
   
