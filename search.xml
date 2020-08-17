@@ -224,25 +224,6 @@
     
     
     <entry>
-      <title>RN分享</title>
-      <link href="/post/98fdf95d.html"/>
-      <url>/post/98fdf95d.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="叨叨说"><a href="#叨叨说" class="headerlink" title="叨叨说"></a>叨叨说</h1><p>本想学习RN的，环境都搭建好了，但是后面被Flutter吸引了，Flutter性能优于RN，加上Dart语言对于我来说（iOS开发经验+Web开发经验）很容易上手，之前有大概看了下RN的编码方式，觉得不喜欢，故暂弃，等有比较多空闲时间时再来研究。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Others </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>FlutterBuilder控件数据会重加载问题</title>
       <link href="/post/fe3720a9.html"/>
       <url>/post/fe3720a9.html</url>
@@ -574,9 +555,9 @@
       
         <tags>
             
-            <tag> Swift </tag>
-            
             <tag> 角标 </tag>
+            
+            <tag> Swift </tag>
             
         </tags>
       
