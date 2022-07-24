@@ -112,7 +112,7 @@
     
     
     <entry>
-      <title>浅谈前端路由原理hash和history</title>
+      <title>浅谈vue-router路由原理hash和history</title>
       <link href="/post/179fdeca.html"/>
       <url>/post/179fdeca.html</url>
       
@@ -632,9 +632,9 @@
       
         <tags>
             
-            <tag> 角标 </tag>
-            
             <tag> Swift </tag>
+            
+            <tag> 角标 </tag>
             
         </tags>
       
