@@ -85,6 +85,33 @@
     
     
     <entry>
+      <title>CSS生成工具分享</title>
+      <link href="/post/18a8d715.html"/>
+      <url>/post/18a8d715.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>工作中手写CSS，是信手拈来，但是也免不了有些样式忘记了，去百度或google，同时是不是还在手写按钮、文本字体等简单样式，这些不得不费时却又不得不做得工作？</p><p>本文的推荐工具就可以帮你解决以上种种难题，从此下班你将快人一步，回家撸猫撸游戏。</p><p>本文做Mark，赶快用起来吧！</p><a id="more"></a><h1 id="工具类分享"><a href="#工具类分享" class="headerlink" title="工具类分享"></a>工具类分享</h1><h2 id="CSS-Button-Generator"><a href="#CSS-Button-Generator" class="headerlink" title="CSS Button Generator"></a>CSS Button Generator</h2><p>地址：<a href="https://cssbuttongenerator.com/" target="_blank" rel="noopener">cssbuttongenerator.com/</a></p><p>推荐：★★★★★</p><p>简介：CSS Button Generator是一个免费的在线工具，可让您创建跨浏览器的 HTML 和CSS 按钮样式，您不必学习任何复杂的CSS规则。只需单击并滑动即可制作CSS 3按钮。很多漂亮的按钮样本。</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/35d3d608571d44c7bedec0dafdd914b7~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="花式边界半径"><a href="#花式边界半径" class="headerlink" title="花式边界半径"></a>花式边界半径</h2><p>地址：<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" rel="noopener">9elements.github.io/fancy-borde…</a></p><p>推荐：★★★★★</p><p>简介：通过拖拽的形式生成需要的border-radius！</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f2076b1cb259497098af199a9b06ee68~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="平滑阴影"><a href="#平滑阴影" class="headerlink" title="平滑阴影"></a>平滑阴影</h2><p>地址：<a href="https://shadows.brumm.af/" target="_blank" rel="noopener">shadows.brumm.af/</a></p><p>推荐：★★★★★</p><p>简介：可以生成多个分层阴影，提供非常酷的效果，你也可以自定义颜色。</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e3d80836cdc14d919e54719ae66d6f0f~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="阴影生成器"><a href="#阴影生成器" class="headerlink" title="阴影生成器"></a>阴影生成器</h2><p>地址：<a href="https://neumorphism.io/" target="_blank" rel="noopener">neumorphism.io/</a></p><p>推荐：★★★★★</p><p>简介：此网站通过 选择颜色：或大小：半径：距离：强度：模糊：形状：复制边框半径：50px;背景，生成非常nice的阴影，让你的界面更加的美观自然。</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/771daf260cd1446aa877298b85d81786~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="css在线工具"><a href="#css在线工具" class="headerlink" title="css在线工具"></a>css在线工具</h2><p>地址：<a href="https://tool.lu/css/" target="_blank" rel="noopener">tool.lu/css/</a></p><p>推荐：★★★★</p><p>简介：美化：格式化代码，使之容易阅读。净化：将代码单行化，并去除注释。整理：按照一定的顺序，重新排列css的属性。优化：将css的长属性值优化为简写的形式。压缩：将代码最小化，加快加载速度！</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8a705ab3e6046b0a3db88b0c79b6b2c~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="cssgradient"><a href="#cssgradient" class="headerlink" title="cssgradient"></a>cssgradient</h2><p>地址：<a href="https://cssgradient.io/" target="_blank" rel="noopener">cssgradient.io/</a></p><p>推荐：★★★★</p><p>简介：CSS Gradient 是一个快乐的小网站和免费工具，可让您为网站创建渐变背景。</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e85e342d7594600a737e3796836abbe~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="css网格生成器"><a href="#css网格生成器" class="headerlink" title="css网格生成器"></a>css网格生成器</h2><p>地址：<a href="https://cssgrid-generator.netlify.app/" target="_blank" rel="noopener">cssgrid-generator.netlify.app/</a></p><p>推荐：★★★★★</p><p>简介：您可以设置行和列的数字还有单位，我将为您生成一个 CSS Grid 网格布局！在方框中拖动来创建 div 放置在网格内。</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f7a6189cca4142a292b0f63d9c3ef104~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="过渡动画"><a href="#过渡动画" class="headerlink" title="过渡动画"></a>过渡动画</h2><p>地址：<a href="https://www.transition.style/" target="_blank" rel="noopener">www.transition.style/</a></p><p>推荐：★★★★</p><p>简介：各种各样的css动画合集</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b0c858ced164eb597e90f19e5ab5755~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="加载动画"><a href="#加载动画" class="headerlink" title="加载动画"></a>加载动画</h2><p>地址：<a href="https://loading.io/" target="_blank" rel="noopener">loading.io/</a></p><p>推荐：★★★★★</p><p>简介：在这里你可以生成多个加载动画并将其下载为SVG、GIF、PNG和其他格式，但它最棒的特点是你可以将这些动画自定义到一个新的水平。值得尝试。</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5c30ded40974730ab65458915c12530~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="波浪生成器"><a href="#波浪生成器" class="headerlink" title="波浪生成器"></a>波浪生成器</h2><p>地址：<a href="!https://getwaves.io/">getwaves.io/</a></p><p>推荐：★★★★★</p><p>简介：通过一些自定义生成简单的波纹。</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cdafea469e4f4546b30859876548e50e~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="我可以用这个css吗？"><a href="#我可以用这个css吗？" class="headerlink" title="我可以用这个css吗？"></a>我可以用这个css吗？</h2><p>地址：<a href="https://caniuse.com/?search=clip-path" target="_blank" rel="noopener">caniuse.com/?search=cli…</a></p><p>推荐：★★★★★</p><p>简介：不要问我，得问它！css浏览器兼容性查询工具</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4fe05743d732454389a47ba2446b2a5c~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="零代码工具箱"><a href="#零代码工具箱" class="headerlink" title="零代码工具箱"></a>零代码工具箱</h2><p>地址：<a href="https://www.lingdaima.com/" target="_blank" rel="noopener">www.lingdaima.com/</a></p><p>推荐：★★★★★</p><p>简介：各种前端实用的好工具，杜绝造轮子，每款工具都经过精心打磨，帮助所有程序员提高前端开发效率！</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/027583369cf74941ad133e5afe749a59~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h2 id="css技巧"><a href="#css技巧" class="headerlink" title="css技巧"></a>css技巧</h2><p>地址：<a href="https://lhammer.cn/You-need-to-know-css/" target="_blank" rel="noopener">lhammer.cn/You-need-to…</a></p><p>推荐：★★★★★</p><p>简介：css小技巧合集，一直在更新！</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bd51f386de2446bfac0786d11f49dd70~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt></p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>记个笔记Mark下，以后有用好翻阅。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Web </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浏览器输入url到页面渲染过程</title>
       <link href="/post/7429757f.html"/>
       <url>/post/7429757f.html</url>
@@ -373,9 +400,9 @@
       
         <tags>
             
-            <tag> Vue </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> Vue </tag>
             
         </tags>
       
